@@ -151,9 +151,7 @@ begin
         ProgressPage.SetText('Extracting XMouse Button Control...', App + '\xmouse');
         ProgressPage.SetProgress(Done + 1, Total);
 
-        if RunHidden('powershell.exe',
-          Format('-NoProfile -Command "Expand-Archive -Path ''%s\XMousePortable.zip'' -DestinationPath ''%s\xmouse'' -Force"',
-            [Tmp, App])) <> 0 then
+        if RunHidden('powershell.exe', Format('-NoProfile -Command "Expand-Archive -Path ''%s\XMousePortable.zip'' -DestinationPath ''%s\xmouse'' -Force"', [Tmp, App])) <> 0 then
         begin
           { Fallback: file may be a standalone exe rather than a zip }
           ForceDirectories(App + '\xmouse');
