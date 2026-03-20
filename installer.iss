@@ -1,9 +1,8 @@
 ; Internet QuickKit Installer
-; Compile with Inno Setup 6.1+ (https://jrsoftware.org/isinfo.php)
+; Compile with Inno Setup 6+ (https://jrsoftware.org/isinfo.php)
 ;
 ; Downloads and silently installs selected tools.
-; Does NOT use PowerShell or CMD — only Inno Setup built-in download
-; and direct exe calls.
+; Uses urlmon.dll for downloads — no PowerShell, no CMD.
 
 #define MyAppName    "Internet QuickKit"
 #define MyAppVersion "1.0"
@@ -45,100 +44,124 @@ Type: filesandordirs; Name: "{app}\xmouse"
 const
   GitURL    = 'https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.2/Git-2.53.0.2-64-bit.exe';
   CraneURL  = 'https://github.com/google/go-containerregistry/releases/download/v0.21.3/go-containerregistry_Windows_x86_64.tar.gz';
-  XMouseURL = 'https://www.highrez.co.uk/scripts/download.asp?package=XMousePortable';
+  XMouseURL = 'https://dvps.highrez.co.uk/downloads/XMouseButtonControl%202.20.5%20Portable.zip';
+
+function URLDownloadToFile(pCaller: Integer; szURL, szFileName: string; Reserved: Integer; StatusCB: Integer): Integer;
+  external 'URLDownloadToFileW@urlmon.dll stdcall';
+
+function DeleteUrlCacheEntry(lpszUrlName: string): Boolean;
+  external 'DeleteUrlCacheEntryW@wininet.dll stdcall';
 
 var
-  DownloadPage: TDownloadWizardPage;
+  ProgressPage: TOutputProgressWizardPage;
 
-function OnDownloadProgress(const Url, FileName: string; const Progress, ProgressMax: Int64): Boolean;
+function DoDownload(const URL, Dest, DisplayName: string): Boolean;
+var
+  Res: Integer;
 begin
-  if ProgressMax <> 0 then
-    Log(Format('  %d of %d bytes', [Progress, ProgressMax]));
-  Result := True;
-end;
-
-procedure InitializeWizard;
-begin
-  DownloadPage := CreateDownloadPage(
-    SetupMessage(msgWizardPreparing),
-    SetupMessage(msgPreparingDesc),
-    @OnDownloadProgress);
-end;
-
-function NextButtonClick(CurPageID: Integer): Boolean;
-begin
-  Result := True;
-  if CurPageID <> wpReady then
-    Exit;
-
-  DownloadPage.Clear;
-
-  if WizardIsComponentSelected('git') then
-    DownloadPage.Add(GitURL, 'GitSetup.exe', '');
-  if WizardIsComponentSelected('crane') then
-    DownloadPage.Add(CraneURL, 'crane.tar.gz', '');
-  if WizardIsComponentSelected('xmouse') then
-    DownloadPage.Add(XMouseURL, 'XMousePortable.zip', '');
-
-  DownloadPage.Show;
-  try
-    try
-      DownloadPage.Download;
-      Result := True;
-    except
-      if DownloadPage.AbortedByUser then
-        Log('Download aborted by user.')
-      else
-        SuppressibleMsgBox(AddPeriod(GetExceptionMessage), mbCriticalError, MB_OK, IDOK);
-      Result := False;
-    end;
-  finally
-    DownloadPage.Hide;
-  end;
+  DeleteUrlCacheEntry(URL);
+  Log(Format('Downloading %s from %s', [DisplayName, URL]));
+  Res := URLDownloadToFile(0, URL, Dest, 0, 0);
+  Result := (Res = 0);
+  if Result then
+    Log(Format('Downloaded %s OK', [DisplayName]))
+  else
+    Log(Format('Download FAILED for %s, HRESULT=%d', [DisplayName, Res]));
 end;
 
 procedure CurStepChanged(CurStep: TSetupStep);
 var
-  Tmp, App, TarExe: string;
-  Code: Integer;
+  Tmp, App: string;
+  Done, Total, Code: Integer;
 begin
   if CurStep <> ssPostInstall then
     Exit;
 
   Tmp := ExpandConstant('{tmp}');
   App := ExpandConstant('{app}');
-  TarExe := ExpandConstant('{sys}\tar.exe');
+  Done  := 0;
+  Total := 0;
 
-  { ---- Git for Windows ---- }
-  if WizardIsComponentSelected('git') then
-  begin
-    Log('Installing Git...');
-    Exec(Tmp + '\GitSetup.exe', '/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER', Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
-    Log(Format('Git installer exit code: %d', [Code]));
-    DeleteFile(Tmp + '\GitSetup.exe');
-  end;
+  if WizardIsComponentSelected('git')    then Total := Total + 2;
+  if WizardIsComponentSelected('crane')  then Total := Total + 2;
+  if WizardIsComponentSelected('xmouse') then Total := Total + 2;
+  if Total = 0 then Exit;
 
-  { ---- Crane ---- }
-  if WizardIsComponentSelected('crane') then
-  begin
-    Log('Extracting Crane...');
-    Exec(TarExe, Format('-xzf "%s\crane.tar.gz" -C "%s\crane"', [Tmp, App]), Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
-    Log(Format('Crane tar exit code: %d', [Code]));
-    DeleteFile(Tmp + '\crane.tar.gz');
-  end;
+  ProgressPage := CreateOutputProgressPage(
+    'Installing Tools',
+    'Downloading and installing selected components...');
+  ProgressPage.Show;
+  try
 
-  { ---- XMouse Button Control ---- }
-  if WizardIsComponentSelected('xmouse') then
-  begin
-    Log('Extracting XMouse...');
-    Exec(TarExe, Format('-xf "%s\XMousePortable.zip" -C "%s\xmouse"', [Tmp, App]), Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
-    if Code <> 0 then
+    { ---- Git for Windows ---- }
+    if WizardIsComponentSelected('git') then
     begin
-      { Fallback: not a zip, just copy the file as-is }
-      ForceDirectories(App + '\xmouse');
-      CopyFile(Tmp + '\XMousePortable.zip', App + '\xmouse\XMouseButtonControl.exe', False);
+      ProgressPage.SetText('Downloading Git for Windows...', 'This may take a few minutes');
+      ProgressPage.SetProgress(Done, Total);
+
+      if DoDownload(GitURL, Tmp + '\GitSetup.exe', 'Git') then
+      begin
+        Done := Done + 1;
+        ProgressPage.SetText('Installing Git for Windows (silent)...', '');
+        ProgressPage.SetProgress(Done, Total);
+        Exec(Tmp + '\GitSetup.exe', '/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER', Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
+        DeleteFile(Tmp + '\GitSetup.exe');
+      end
+      else
+        MsgBox('Failed to download Git for Windows. Skipping.', mbError, MB_OK);
+
+      Done := Done + 1;
     end;
-    Log(Format('XMouse exit code: %d', [Code]));
-    DeleteFile(Tmp + '\XMousePortable.zip');
+
+    { ---- Crane ---- }
+    if WizardIsComponentSelected('crane') then
+    begin
+      ProgressPage.SetText('Downloading Crane...', 'This may take a minute');
+      ProgressPage.SetProgress(Done, Total);
+
+      if DoDownload(CraneURL, Tmp + '\crane.tar.gz', 'Crane') then
+      begin
+        Done := Done + 1;
+        ProgressPage.SetText('Extracting Crane...', App + '\crane');
+        ProgressPage.SetProgress(Done, Total);
+        Exec(ExpandConstant('{sys}\tar.exe'), Format('-xzf "%s\crane.tar.gz" -C "%s\crane"', [Tmp, App]), Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
+        DeleteFile(Tmp + '\crane.tar.gz');
+      end
+      else
+        MsgBox('Failed to download Crane. Skipping.', mbError, MB_OK);
+
+      Done := Done + 1;
+    end;
+
+    { ---- XMouse Button Control ---- }
+    if WizardIsComponentSelected('xmouse') then
+    begin
+      ProgressPage.SetText('Downloading XMouse Button Control...', 'This may take a minute');
+      ProgressPage.SetProgress(Done, Total);
+
+      if DoDownload(XMouseURL, Tmp + '\XMousePortable.zip', 'XMouse') then
+      begin
+        Done := Done + 1;
+        ProgressPage.SetText('Extracting XMouse Button Control...', App + '\xmouse');
+        ProgressPage.SetProgress(Done, Total);
+        Exec(ExpandConstant('{sys}\tar.exe'), Format('-xf "%s\XMousePortable.zip" -C "%s\xmouse"', [Tmp, App]), Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
+        if Code <> 0 then
+        begin
+          ForceDirectories(App + '\xmouse');
+          CopyFile(Tmp + '\XMousePortable.zip', App + '\xmouse\XMouseButtonControl.exe', False);
+        end;
+        DeleteFile(Tmp + '\XMousePortable.zip');
+      end
+      else
+        MsgBox('Failed to download XMouse Button Control. Skipping.', mbError, MB_OK);
+
+      Done := Done + 1;
+    end;
+
+    ProgressPage.SetText('Done!', '');
+    ProgressPage.SetProgress(Total, Total);
+
+  finally
+    ProgressPage.Hide;
   end;
 end;
