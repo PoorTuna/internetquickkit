@@ -11,7 +11,7 @@ AppId={{A8F3D2E1-94B7-4C06-B5A1-3E7F60D8C912}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher=Internet QuickKit
-DefaultDirName={localappdata}\InternetQuickKit
+DefaultDirName={userdesktop}\InternetQuickKit
 DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 OutputBaseFilename=InternetQuickKitInstaller
@@ -37,10 +37,12 @@ Source: "bundle\crane.tar.gz";      DestDir: "{tmp}"; Components: crane;  Flags:
 Source: "bundle\XMousePortable.zip"; DestDir: "{tmp}"; Components: xmouse; Flags: ignoreversion deleteafterinstall
 
 [Dirs]
+Name: "{app}\Git";    Components: git
 Name: "{app}\crane";  Components: crane
 Name: "{app}\xmouse"; Components: xmouse
 
 [UninstallDelete]
+Type: filesandordirs; Name: "{app}\Git"
 Type: filesandordirs; Name: "{app}\crane"
 Type: filesandordirs; Name: "{app}\xmouse"
 
@@ -60,7 +62,7 @@ begin
   if WizardIsComponentSelected('git') then
   begin
     Log('Installing Git...');
-    Exec(Tmp + '\GitSetup.exe', '/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER', Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
+    Exec(Tmp + '\GitSetup.exe', Format('/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER /DIR="%s\Git"', [App]), Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
     Log(Format('Git exit code: %d', [Code]));
   end;
 
