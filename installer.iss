@@ -21,6 +21,7 @@ OutputBaseFilename=InternetQuickKitInstaller
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+ArchitecturesAllowed=x64
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -51,21 +52,24 @@ const
 var
   ProgressPage: TOutputProgressWizardPage;
 
-function RunHidden(const Exe, Params: string): Integer;
+function RunCmd(const Exe, Params, WorkDir: string): Integer;
 var
   Code: Integer;
 begin
-  if Exec(Exe, Params, '', SW_HIDE, ewWaitUntilTerminated, Code) then
+  Log(Format('RunCmd: %s %s (in %s)', [Exe, Params, WorkDir]));
+  if Exec(Exe, Params, WorkDir, SW_HIDE, ewWaitUntilTerminated, Code) then
     Result := Code
   else
     Result := -1;
-  Log(Format('Exec [%d]: %s %s', [Result, Exe, Params]));
+  Log(Format('RunCmd result: %d', [Result]));
 end;
 
 function Download(const URL, DestPath: string): Boolean;
+var
+  PsCmd: string;
 begin
-  Result := RunHidden('curl.exe',
-    Format('-L --silent --fail -o "%s" "%s"', [DestPath, URL])) = 0;
+  PsCmd := Format('[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri ''%s'' -OutFile ''%s'' -UseBasicParsing', [URL, DestPath]);
+  Result := RunCmd(ExpandConstant('{sysnative}\WindowsPowerShell\v1.0\powershell.exe'), Format('-NoProfile -ExecutionPolicy Bypass -Command "%s"', [PsCmd]), ExpandConstant('{tmp}')) = 0;
 end;
 
 procedure CurStepChanged(CurStep: TSetupStep);
@@ -81,9 +85,9 @@ begin
   Done  := 0;
   Total := 0;
 
-  if IsComponentSelected('git')    then Total := Total + 2;
-  if IsComponentSelected('crane')  then Total := Total + 2;
-  if IsComponentSelected('xmouse') then Total := Total + 2;
+  if WizardIsComponentSelected('git')    then Total := Total + 2;
+  if WizardIsComponentSelected('crane')  then Total := Total + 2;
+  if WizardIsComponentSelected('xmouse') then Total := Total + 2;
   if Total = 0 then Exit;
 
   ProgressPage := CreateOutputProgressPage(
@@ -95,22 +99,20 @@ begin
     { ================================================================ }
     {  Git for Windows                                                  }
     { ================================================================ }
-    if IsComponentSelected('git') then
+    if WizardIsComponentSelected('git') then
     begin
-      ProgressPage.SetText('Downloading Git for Windows...', GitURL);
+      ProgressPage.SetText('Downloading Git for Windows...', 'This may take a few minutes');
       ProgressPage.SetProgress(Done, Total);
 
       if Download(GitURL, Tmp + '\GitSetup.exe') then
       begin
         ProgressPage.SetText('Installing Git for Windows (silent)...', '');
         ProgressPage.SetProgress(Done + 1, Total);
-        RunHidden(Tmp + '\GitSetup.exe',
-          '/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER');
+        RunCmd(Tmp + '\GitSetup.exe', '/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER', Tmp);
         DeleteFile(Tmp + '\GitSetup.exe');
       end
       else
-        MsgBox('Failed to download Git for Windows. Skipping.',
-          mbError, MB_OK);
+        MsgBox('Failed to download Git for Windows. Skipping.', mbError, MB_OK);
 
       Done := Done + 2;
     end;
@@ -118,22 +120,20 @@ begin
     { ================================================================ }
     {  Crane                                                            }
     { ================================================================ }
-    if IsComponentSelected('crane') then
+    if WizardIsComponentSelected('crane') then
     begin
-      ProgressPage.SetText('Downloading Crane...', CraneURL);
+      ProgressPage.SetText('Downloading Crane...', 'This may take a minute');
       ProgressPage.SetProgress(Done, Total);
 
       if Download(CraneURL, Tmp + '\crane.tar.gz') then
       begin
         ProgressPage.SetText('Extracting Crane...', App + '\crane');
         ProgressPage.SetProgress(Done + 1, Total);
-        RunHidden('tar.exe',
-          Format('-xzf "%s\crane.tar.gz" -C "%s\crane"', [Tmp, App]));
+        RunCmd(ExpandConstant('{sysnative}\tar.exe'), Format('-xzf "%s\crane.tar.gz" -C "%s\crane"', [Tmp, App]), Tmp);
         DeleteFile(Tmp + '\crane.tar.gz');
       end
       else
-        MsgBox('Failed to download Crane. Skipping.',
-          mbError, MB_OK);
+        MsgBox('Failed to download Crane. Skipping.', mbError, MB_OK);
 
       Done := Done + 2;
     end;
@@ -141,9 +141,9 @@ begin
     { ================================================================ }
     {  XMouse Button Control                                            }
     { ================================================================ }
-    if IsComponentSelected('xmouse') then
+    if WizardIsComponentSelected('xmouse') then
     begin
-      ProgressPage.SetText('Downloading XMouse Button Control...', XMouseURL);
+      ProgressPage.SetText('Downloading XMouse Button Control...', 'This may take a minute');
       ProgressPage.SetProgress(Done, Total);
 
       if Download(XMouseURL, Tmp + '\XMousePortable.zip') then
@@ -151,19 +151,17 @@ begin
         ProgressPage.SetText('Extracting XMouse Button Control...', App + '\xmouse');
         ProgressPage.SetProgress(Done + 1, Total);
 
-        if RunHidden('powershell.exe', Format('-NoProfile -Command "Expand-Archive -Path ''%s\XMousePortable.zip'' -DestinationPath ''%s\xmouse'' -Force"', [Tmp, App])) <> 0 then
+        if RunCmd(ExpandConstant('{sysnative}\WindowsPowerShell\v1.0\powershell.exe'), Format('-NoProfile -Command "Expand-Archive -Path ''%s\XMousePortable.zip'' -DestinationPath ''%s\xmouse'' -Force"', [Tmp, App]), Tmp) <> 0 then
         begin
           { Fallback: file may be a standalone exe rather than a zip }
           ForceDirectories(App + '\xmouse');
-          FileCopy(Tmp + '\XMousePortable.zip',
-            App + '\xmouse\XMouseButtonControl.exe', False);
+          CopyFile(Tmp + '\XMousePortable.zip', App + '\xmouse\XMouseButtonControl.exe', False);
         end;
 
         DeleteFile(Tmp + '\XMousePortable.zip');
       end
       else
-        MsgBox('Failed to download XMouse Button Control. Skipping.',
-          mbError, MB_OK);
+        MsgBox('Failed to download XMouse Button Control. Skipping.', mbError, MB_OK);
 
       Done := Done + 2;
     end;
