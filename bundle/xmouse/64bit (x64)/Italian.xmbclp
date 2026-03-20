@@ -1,0 +1,1238 @@
+﻿# Esempio di file modello di linguaggio XMBC.
+# Versione base 2.20.1
+#
+# Le modifiche a questo modello sono contrassegnate:
+# -- Aggiornato in <versione> --
+# O
+# -- Aggiunto in <versione> --
+# O
+# -- Rimosso in <versione> (e lasciato nel template per retrocompatibilità) --
+#
+# Assicurati che l'estensione del file sia .xmbclp (X-Mouse Button Control Language Pack)
+"# che puoi "installare" in XMBC semplicemente facendo doppio clic su di esso o trascinandolo nella cartella del profilo."
+#
+# Tutti i commenti devono essere preceduti dal carattere s hash/cancelletto '#'.
+#
+# Invia le traduzioni ai forum di Highrez o direttamente all'autore e saranno incluse
+# versioni future del pacchetto di installazione e del sito Web del language pack.
+#
+#
+#Descrivi qui il language pack: viene visualizzato nell'elenco a discesa della lingua nella scheda delle impostazioni.
+#Idealmente (per coerenza) metti il ??nome della tua lingua localizzata, seguito dal nome della lingua inglese tra parentesi
+#Ad esempio: Language=Français (francese)
+#
+Language=Italiano (Italian 2.20.1)
+Description=File lingua di esempio per fornire la traduzione in lingua per XMBC. Per favore aiutami traducendo questo nella tua lingua!
+
+#
+#Inserisci qui il tuo nome e verrai accreditato nell'interfaccia utente
+#
+Autore=Paolo A. Lopiano
+
+#Section: Schermata di configurazione
+"Scrolling && Navigation" => "Scrolling && Navigation"				# Rimosso nella 2.15 Beta 5
+"Scrolling" => "Scrolling"				# Aggiunto in 2.15 Beta 5
+"Options" => "Opzioni"				# Aggiunto in 2.15 Beta 5
+"Default" => "Predefinito"
+"A&dd" => "A&gg"
+"Edi&t" => "Modifica"
+"Cop&y" => "Cop&y"				# Modificato nella 2.16 Beta 12
+"Remo&ve" => "Rimuovi"
+"&Settings" => "&Impostazioni"
+"Abo&ut" => "Informazioni"
+"&Apply" => "&Applica"
+"&Close" => "&Chiudi"
+"Description" => "Descrizione"				#Condiviso anche con la scheda delle impostazioni della lingua!
+"Process" => "Processo"
+"Class" => "Classe"
+"Window Class" => "Gruppo finestra"
+"Parent Class" => "Gruppo principale"
+"Application / Window Profiles:" => "Profili applicazione/finestra:"
+"Profile Information" => "Informazioni sul profilo"
+"Setup" => "Imposta"
+"Profile:" => "Profilo:"
+
+# -- Aggiunto nella 2.7 Beta 4 --"
+"Disabled because Scroll Lock is ON!" => "Disabilitato perché Scroll Lock è attivo!"
+"Disabled under Remote Desktop!" => "Disabilitato in Desktop remoto!"
+#--
+
+# -- Aggiunto in 2.8 Beta 7 --
+"U&p" => "U&p"
+"Do&wn" => "Do&wn"
+"&Export" => "&Esporta"
+"&Import" => "&Importa"
+"Unable to save the settings file" => "Impossibile salvare il file delle impostazioni"
+"Please check you installation settings." => "Verifica le impostazioni di installazione."
+"Contact the developer for support." => "Contatta lo sviluppatore per assistenza."
+"#--
+
+# -- Aggiunto in 2.8 Beta 10 --
+"Window Caption" => "Didascalia finestra"
+#--
+
+# -- Aggiunto nella 2.16 Beta 3 --
+"Save &Profile" => "Salva &profilo"				# Modificato in 2.16 Beta 12
+"L&oad Profile" => "Carica pr&ofilo"				# Modificato in 2.16 Beta 12
+"Save %s Profile..." => "Salva profilo %s..."
+"Load %s Profile..." => "Carica profilo %s..."
+"Unable to load the profile '%s'." => "Impossibile caricare il profilo '%s'."
+"Unable to save the profile as '%s'." => "Impossibile salvare il profilo come '%s'."
+#--
+
+#Section: stringhe globali (usate ovunque)
+"Layer" => "Livello"
+"Portable" => "Portatile"
+"All" => "Tutti"
+"Not Defined" => "Non definito"
+"Default: All windows that do not match any profile." => "Predefinito: tutte le finestre che non corrispondono ad alcun profilo."
+"&OK" => "&OK"
+"&Cancel" => "&Annulla"
+"OK" => "OK"
+"Cancel" => "Annulla"
+"Global Settings" => "Impostazioni globali"
+
+# -- Aggiunto nella 2.10 Beta 10 --
+"Number of  &layers" => "Numero di &layer"
+
+
+#Section: scheda Impostazioni generali
+"General" => "Generale"
+"Enable profi&le switching on mouse move" => "Abilita cambio profilo al movimento del mouse"
+"Ma&ke scroll wheel scroll window under cursor" => "Fa&ke scorrere la finestra di scorrimento della rotellina sotto il cursore"
+"B&ypass ALL actions when SCROLL LOCK is ON" => "Elimina TUTTE le azioni quando BLOC SCORR è ATTIVO"
+"By&pass 'disabled' actions when SCROLL LOCK is ON" => "Blocca e ignora le azioni 'disabilitate' quando BLOC SCORR è ATTIVO"
+"&Disable when running under remote desktop (RDP)" => "&Disabilita durante l'esecuzione in desktop remoto (RDP)"
+"Show layer switch &balloon notifications" => "Mostra notifiche cambio livello e fumetto"
+"A&ctivate window when scrolling" => "Attiva&finestra durante lo scorrimento"
+"Always show the volume &On Screen Display" => "Mostra sempre il volume &On Screen Display"				#Questa opzione viene visualizzata solo sui sistemi operativi in ??cui è applicabile, ad es. Vista, 7, 2008, 2008R2
+"&Enable On Screen Display for volume and brightness settings" => "&Abilita la visualizzazione su schermo per le impostazioni di volume e luminosità"				#Questa opzione viene visualizzata solo sui sistemi operativi in ??cui è applicabile, ad es. Vista, 7, 2008, 2008R2
+"Enable &notifications" => "Abilita ¬ifiche"
+
+# -- Rimosso nella 2.17 Beta 9
+"S&wap 4th and 5th buttons" => "S&cambia 4° e 5° pulsante"
+"Sw&ap 4th and 5th buttons when connected by remote desktop (RDP)" => "Scambia il 4° e il 5° pulsante quando connesso tramite desktop remoto (RDP)"
+
+# -- Aggiunto (sostituito) nella 2.17 Beta 9
+"S&wap 4th and 5th button actions (when set)" => "Scambia azioni del 4° e 5° pulsante (quando impostato)"
+"Sw&ap 4th and 5th button actions when connected by remote desktop (RDP)" => "Scambia le azioni del 4° e 5° pulsante quando sei connesso tramite desktop remoto (RDP)"
+
+# -- Added in 2.14 Beta 10
+"So&rt mouse button action list alphabetically" => "Ordina l'elenco delle azioni del pulsante del mouse in ordine alfabetico"
+
+# -- Added in 2.16 Beta 4
+"Disable &Inverted Scroll when running under remote desktop (RDP)" => "Disabilita lo &scorrimento invertito durante l'esecuzione in desktop remoto (RDP)"
+
+# -- Added in 2.18.6
+"Redirect mouse wheel to On Screen Display when &visible" => "Reindirizza la rotellina del mouse su On Screen Display quando &visibile"				#Questa opzione viene visualizzata solo sui sistemi operativi in ??cui è applicabile, ad es. Vista, 7, 2008, 2008R2
+
+# -- Added in 2.19 Beta 1
+"Remember c&urrent layer when restarting" => "Ricorda livello corrente al riavvio"
+"Ignore &mouse events from touch" => "Ignora eventi &mouse dal tocco"
+
+
+##
+#Section: scheda Impostazioni puntatore (novità nella versione 2.19 Beta 7)
+"Pointer" => "Puntatore"
+"Motion" => "Movimento"
+"Allow &XMBC to set the mouse speed and DPI" => "Consenti a &XMBC di impostare la velocità del mouse e il DPI"				# -- Aggiunto nella versione 2.19 Beta 6
+"Mouse &Speed" => "Mouse &Velocità"
+"En&hance pointer precision" => "Migliora&la precisione del puntatore"
+"Mouse speed for each cursor speed cycle:" => "Velocità del mouse per ogni ciclo di velocità del cursore:"
+"Show cursor speed &balloon notifications" => "Mostra velocità cursore e notifiche fumetto"
+"Change cursor when using &Movement To Scroll" => "Cambia cursore quando usi &Spostamento per scorrere"
+
+# -- Aggiunto nella 2.19 Beta 8
+"Change cursor when using Button &Chording" => "Cambia il cursore quando usi Button &Chording"
+"Change cursor when using Button H&eld" => "Cambia cursore durante l'utilizzo di Button H&eld"
+"Change cursor to indicate active &layer" => "Cambia il cursore per indicare il &layer attivo"
+
+# -- Spostato nella scheda generale in 2.19.2
+"Show &tray icon by default" => "Mostra l'icona nella barra delle applicazioni per impostazione predefinita"
+"Cycle layers by left clickin&g tray icon" => "Scorri i livelli facendo clic con il tasto sinistro&g sull'icona nella barra delle applicazioni"				# -- Aggiornato in 2.19.2 --
+
+#Section: scheda Impostazioni avanzate
+"Advanced" => "Avanzate"
+"NOTE: You must press OK and apply the settings on the main screen before they take effect." => "NOTA: è necessario premere OK e applicare le impostazioni nella schermata principale prima che abbiano effetto."
+"Process &Non-Client mouse messages *RECOMMENDED*" => "Elabora messaggi del mouse non client *CONSIGLIATO*"
+"Reset &sticky buttons when any other button is pressed" => "Ripristina &sticky buttons quando viene premuto qualsiasi altro pulsante"
+"R&eset sticky buttons when any other key is pressed" => "Rimuovi i pulsanti permanenti quando viene premuto qualsiasi altro tasto"
+"&Ignore numlock state for Simulated Keystrokes" => "&Ignora lo stato del blocco numerico per i tasti simulati"
+"&Remap simulated input from other applications" => "&Rimappa input simulato da altre applicazioni"				# -- Aggiunto in 2.17 Beta 12
+"&Fixup (de-bounce) tilt wheel auto-repeat" => "&Fixup (de-bounce) ripetizione automatica della rotella di inclinazione"
+"Initial repeat r&ate" => "Initial repeat r&ate"				# -- Modificato nella versione 2.16 Beta 18 - NON USARE &P per l'acceleratore --
+"&Repeat tilt rate" => "&Repeat tilt rate"				# -- Modificato nella 2.16 Beta 18 - NON USARE &P per l'acceleratore --
+"(ms)" => "(ms)"
+"Dela&y between simulated keystrokes" => "Dela&y tra sequenze di tasti simulate"
+"&CPU Priority" => "Priorità&CPU"
+"Realtime" => "Tempo reale"
+"High" => "Alto"
+"Above normal" => "Sopra il normale"
+"Normal" => "Normale"
+"Below normal" => "Sotto il normale"
+"&De-bounce (ignore) rapid mouse button clicks" => "&De-bounce (ignora) clic rapidi del pulsante del mouse"
+"Start de-bounce timer when button is released" => "Avvia il timer antirimbalzo quando il pulsante viene rilasciato"
+"Load &US English keyboard if no equivalent is available" => "Carica la tastiera &inglese USA se non è disponibile un equivalente"
+"Reset stic&ky buttons when the layer changes" => "Ripristina pulsanti adesivi quando il livello cambia"
+"Disable inactivity timer while inactive for" => "Disabilita il timer di inattività mentre sei inattivo per"
+"(min)" => "(minimo)"
+"&Windows Low Level Hook Timeout (Reboot required)" => "&Windows Low Level Hook Timeout (riavvio richiesto)"
+"Reset mouse &hooks when resuming from sleep" => "Ripristina i &hooks del mouse quando riprendi dalla sospensione"				# -- Aggiunto in 2.19.2
+
+#Section: Scheda Impostazioni lingua (Aggiunta in 2.14 Beta 7)
+"NOTE: You must press OK and apply the settings on the main screen before they take effect. Language changes will not be applied until the main window is re-opened." => "NOTA: è necessario premere OK e applicare le impostazioni nella schermata principale prima che abbiano effetto. Le modifiche alla lingua non verranno applicate fino alla riapertura della finestra principale."
+"Author" => "Autore"				#L'etichetta nella pagina delle impostazioni della lingua. La parola 'Autore' dovrebbe essere tradotta direttamente, cioè Non mettere il tuo nome qui :)
+"Language" => "Lingua"
+
+#Section: scheda Aggiorna e impostazioni di registrazione (aggiunta in 2.14 Beta 7)
+"Updates && Logging" => "Aggiornamenti && Registrazione"
+"Check for new &version every" => "Verifica nuove &versioni ogni"
+"Check for &beta versions" => "Cerca versioni &beta"
+"days (at application startup)" => "giorni (all'avvio dell'applicazione)"
+"Enable &DEBUG logging" => "Abilita registrazione &DEBUG"
+"*** Debug logging will degrade performance and response times! ***" => "*** La registrazione del debug ridurrà le prestazioni e i tempi di risposta! ***"
+"&Log File Folder" => "&Cartella file registro"
+"Select a folder to store the log file..." => "Seleziona una cartella in cui archiviare il file di registro..."
+"Leave blank to use the default folder!" => "Lascia vuoto per utilizzare la cartella predefinita!"
+"*** Changes to the log file folder will be applied next time you start XMBC! ***" => "*** Le modifiche alla cartella del file di registro verranno applicate al prossimo avvio di XMBC! ***"
+"Updates" => "Aggiornamenti"
+"Logging" => "Registrazione"
+
+#Section: scheda delle impostazioni dei tasti di scelta rapida
+"Hotkeys" => "Tasti di scelta rapida"
+"Enable &global hotkeys" => "Abilita tasti di scelta rapida &globali"
+"You can assign your hotkeys using the boxes below..." => "Puoi assegnare i tuoi tasti di scelta rapida utilizzando le caselle sottostanti..."
+"Switch to Layer &1" => "Passa al livello &1"
+"Switch to Layer &2" => "Passa al livello &2"
+"Switch to Layer &3" => "Passa al livello &3"
+"Switch to Layer &4" => "Passa al livello &4"
+"Switch to Layer &5" => "Passa al livello &5"
+"Switch to Layer &6" => "Passa al livello &6"
+"Switch to Layer &7" => "Passa al livello &7"
+"Switch to Layer &8" => "Passa al livello &8"
+"Switch to Layer &9" => "Passa al livello &9"
+"Switch to Layer 1&0" => "Passa al livello 1&0"
+"&Next Layer" => "&Livello successivo"
+"&Previous Layer" => "&Livello precedente"
+"&Enable/Disable XMBC" => "&Abilita/Disabilita XMBC"
+"&Toggle Debug mode" => "&Attiva/disattiva modalità di debug"
+"&Save desktop icon layout" => "&Salva il layout delle icone sul desktop"
+"Restore desktop icon &layout" => "Ripristina &layout icona desktop"
+# -- Aggiornato in 2.5 beta 4 --
+"Toggle &X Axis Lock" => "Attiva/disattiva blocco asse X"
+"Toggle &Y Axis Lock" => "Attiva/disattiva blocco asse Y"
+"In&vert X Axis" => "In&vert X Axis"				# -- Aggiunto in 2.19 Beta 10
+"Inve&rt Y Axis" => "Inverti asse Y"				# -- Aggiunto nella versione 2.19 Beta 10
+"S&nap cursor to primary monitor" => "S&nap cursor to primary monitor"				# -- Aggiunto in 2.15 beta 3 --
+"Snap cursor to &active window" => "Aggancia il cursore alla &finestra attiva"				# -- Aggiunto nella 2.15 beta 8 --
+"Snap cursor to &profile window" => "Aggancia il cursore alla finestra &profilo"				# -- Aggiunto nella 2.15 beta 8 --
+"Open Settings Window" => "Apri finestra impostazioni"				# -- Aggiunto in 2.10 beta 5 --
+"NOTE: Only valid hotkey combinations will be allowed." => "NOTA: saranno consentite solo combinazioni di tasti di scelta rapida valide."
+
+"Global hotkeys are disabled when in the settings dialog. You have to apply and close the settings before they will work." => "I tasti di scelta rapida globali sono disabilitati nella finestra di dialogo delle impostazioni. Devi applicare e chiudere le impostazioni prima che funzionino."
+"Global hotkeys" => "Tasti di scelta rapida globali"
+"F12 can not be used as a hotkey on its own as this is reserved by Windows." => "F12 non può essere utilizzato come tasto di scelta rapida da solo poiché è riservato da Windows."				#Errore visualizzato se l'utente tenta di assegnare F12 come tasto di scelta rapida globale.
+"# -- Updated in 2.14 Beta 7 --"
+"Layer Hotkeys" => "Tasti di scelta rapida livello"
+"Other Hotkeys" => "Altri tasti di scelta rapida"
+# --
+
+#Section: scheda Impostazioni tasto Modificatore layer
+"Modifier Keys" => "Tasti modificatori"
+"Enab&le modifier keys (switching layers && axis locking)" => "Abilita i tasti di modifica (cambio di layer e& blocco dell'asse)"
+"Modifier keys are keyboard shortcuts that will temporarily activate the function while the key combination is held down. As soon as you release the key(s), the previous state will return." => "I tasti modificatori sono scorciatoie da tastiera che attiveranno temporaneamente la funzione mentre si tiene premuta la combinazione di tasti. Non appena si rilasciano i tasti, verrà ripristinato lo stato precedente."
+"Layers" => "Livelli"
+"Activate Layer 1" => "Attiva livello 1"
+"Activate Layer 2" => "Attiva livello 2"
+"Activate Layer 3" => "Attiva livello 3"
+"Activate Layer 4" => "Attiva livello 4"
+"Activate Layer 5" => "Attiva livello 5"
+# -- Aggiunto nella 2.10 Beta 2 --
+"Activate Layer 6" => "Attiva livello 6"
+"Activate Layer 7" => "Attiva livello 7"
+"Activate Layer 8" => "Attiva livello 8"
+# -- Aggiunto nella 2.10 Beta 3 --
+"Activate Layer 9" => "Attiva livello 9"
+"Activate Layer 10" => "Attiva livello 10"
+# --
+"Axis Locking" => "Blocco asse"
+"Lock X-Axis" => "Blocca asse X"
+"Lock Y-Axis" => "Blocca asse Y"
+
+# -- Added in 2.15 Beta 5 --
+"Slow down cursor" => "Rallenta cursore"
+
+"NOTE: Axis locking requires that you enable axis locking for each application specific profile where you wish to use axis locking. This allows you to lock axis only for a specific application." => "NOTA: il blocco dell'asse richiede l'abilitazione del blocco dell'asse per ogni profilo specifico dell'applicazione in cui si desidera utilizzare il blocco dell'asse. Ciò consente di bloccare l'asse solo per un'applicazione specifica."
+"None" => "Nessuno"
+"Shift" => "Maiusc"
+"Control" => "Ctrl"
+"Alt" => "Alt"
+"Shift + Control" => "Maiusc + Ctrl"
+"Shift + Alt" => "Maiusc + Alt"
+"Shift + Control + Alt" => "Maiusc + Ctrl + Alt"
+"Control + Alt" => "Ctrl + Alt"
+"Left Windows Key" => "Tasto Windows sinistro"				# -- Modificato nella 2.18 Beta 6 (e mancante fino alla 2.19 Beta 13!)
+"Right Windows Key" => "Tasto Windows destro"				# -- Modificato nella versione 2.19 Beta 13
+"App Menu Key" => "Tasto menu app"
+
+# -- Updated in 2.14 Beta 7 --
+"Layer Modifiers" => "Modificatori di livello"
+"Other Modifiers" => "Altri modificatori"
+# --
+
+# -- Added in 2.18 Beta 6 (and missing until 2.19 Beta 13!)
+"Left Windows + Shift" => "Finestra sinistra + Maiusc"
+"Left Windows + Control" => "Finestra sinistra + Control"
+"Left Windows + Alt" => "Finestra sinistra + Alt"
+"Right Windows + Shift" => "Finestra destra + Maiusc"
+"Right Windows + Control" => "Finestra destra + Controllo"
+"Right Windows + Alt" => "Finestra destra + Alt"
+"App Menu + Shift" => "Menu app + Maiusc"
+"App Menu + Control" => "Menu App + Controllo"
+"App Menu + Alt" => "Menu app + Alt"
+"App Menu + Right Windows" => "Menu app + Windows destro"
+# --#--
+
+#Section: Context Menus
+"Edit" => "Modifica"
+"Copy" => "Copia"
+"Remove" => "Rimuovi"
+"Import" => "Importa"
+"Export Selected" => "Esporta selezione"
+"Export All" => "Esporta tutto"
+"&Layers" => "&Livelli"
+"Layer &1" => "Livello &1"
+"Layer &2" => "Livello &2"
+"Layer &3" => "Livello &3"
+"Layer &4" => "Livello &4"
+"Layer &5" => "Livello &5"
+# -- Added in 2.10 Beta 2 --
+"Layer &6" => "Livello &6"
+"Layer &7" => "Livello &7"
+"Layer &8" => "Livello &8"
+# -- Added in 2.10 Beta 3 --
+"Layer &9" => "Livello &9"
+"Layer 1&0" => "Livello 1&0"
+# --
+"&Setup" => "&Impostazioni"
+"&Hide Icon" => "&Nascondi icona"
+"&Open log file" => "&Apri file di registro"
+"&Disable X-Mouse Button Control" => "&Disattiva controllo pulsante X-Mouse"
+"S&ave desktop icon layout" => "S&alva il layout delle icone sul desktop"
+"&Restore desktop icon layout" => "&Ripristina il layout delle icone del desktop"				# -- Aggiornato in 2.6 beta 1 --
+"Exit" => "Esci"
+
+#Section: Tooltips
+# -- Updated in 2.10 Beta 3
+"This graphic shows the active window regions that apply to this profile.\nYou can define these regions in the profile editor." => "Questo grafico mostra le regioni della finestra attiva che si applicano a questo profilo.\nPuoi definire queste regioni nell'editor del profilo."
+"Add/Edit setting for individual layers\nor specific scrolling and navigation behaviour." => "Aggiungi/modifica impostazione per singoli livelli\né comportamento di scorrimento e navigazione specifico."
+# -- Added in 2.10 Beta 2
+"Add a new application or window specific profile." => "Aggiungi una nuova applicazione o un profilo specifico per la finestra."
+"Clone the selected application or window specific profile." => "Clona l'applicazione selezionata o il profilo specifico della finestra."
+"Edit the selected application or window specific profile." => "Modifica l'applicazione selezionata o il profilo specifico della finestra."
+"Delete the selected application or window specific profile." => "Elimina l'applicazione selezionata o il profilo specifico della finestra."
+"Export the selected application or window specific profile." => "Esporta l'applicazione selezionata o il profilo specifico della finestra."
+"Import a saved application or window specific profile." => "Importa un'applicazione salvata o un profilo specifico della finestra."
+"Move the selected application or window specific profile up." => "Sposta in alto l'applicazione selezionata o il profilo specifico della finestra."
+"Move the selected application or window specific profile down." => "Sposta verso il basso l'applicazione selezionata o il profilo specifico della finestra."
+# --#--
+
+#Section: Layer tab(s)
+"Layer name" => "Nome livello"
+"&Left Button" => "&Pulsante sinistro"
+"&Right Button" => "&Pulsante destro"
+"&Middle Button" => "&Pulsante centrale"
+"&Middle Button 2" => "&Pulsante centrale 2"
+"Mouse Button &4" => "Pulsante del mouse &4"
+"Mouse Button &5" => "Pulsante del mouse &5"
+"W&heel Up" => "W&heel Up"
+"Wheel &Down" => "Wheel & Down"				# Modificato in 2.16 Beta 12
+"Tilt Wheel Le&ft" => "Inclina ruota sinistra"
+"Tilt Wheel Ri&ght" => "Inclina ruota a destra"
+"Reset Layer" => "Ripristina livello"
+
+# -- Added in 2.4 Beta 17 --
+"This item is reserved to when a layer modifier\nis used to switch to this layer.\n\nYou can not select it directly." => "Questo elemento è riservato a quando un modificatore di livello\niviene usato per passare a questo livello.\n\nNon puoi selezionarlo direttamente."
+"Layer changing commands need to be applied to all affected layers.\n\nContinue?" => "I comandi di modifica dei livelli devono essere applicati a tutti i livelli interessati.\n\nContinuare?"
+"You can not add a LAYER X modifier to this layer because another layer already has a layer modifier setup to this layer.\nDoing so would cause undetermined behaviour and is therefore not supported." => "Non puoi aggiungere un modificatore LAYER X a questo livello perché un altro livello ha già un modificatore di livello impostato per questo livello.\nFarlo causerebbe un comportamento indeterminato e pertanto non è supportato."
+"If you remove a layer changing command, it will be removed from ALL affected layers.\n\nContinue?" => "Se rimuovi un comando di modifica del livello, verrà rimosso da TUTTI i livelli interessati.\n\nContinuare?"
+#--
+
+# -- Added in 2.8 Beta 6 --
+"Switch to" => "Passa a"
+"after" => "dopo"
+"seconds" => "secondi"
+"Always revert to layer 1" => "Ripristina sempre il livello 1"
+# --
+
+# -- Added in 2.10 Beta 2 --
+"Disable in Next/Previous layer commands" => "Disabilita nei comandi del livello successivo/precedente"
+# --
+
+# -- Added in 2.14 Beta 5 --
+"Are you sure you want to replace layer %d in the default profile?" => "Sei sicuro di voler sostituire il livello %d nel profilo predefinito?"				# %d viene sostituito in fase di esecuzione - lascialo lì!
+"Are you sure you want to replace layer %d in %s (%s)?" => "Sei sicuro di voler sostituire il layer %d in %s (%s)?"				# %d e %s vengono sostituiti in fase di esecuzione - lasciali lì!
+"Do you want to apply your settings before copying the layer?" => "Vuoi applicare le tue impostazioni prima di copiare il livello?"
+"Do you want to apply your settings before swapping the layer?" => "Vuoi applicare le tue impostazioni prima di scambiare il livello?"
+
+# -- Added in 2.14 Beta 6 --
+"Copy Layer" => "Copia livello"
+"Swap Layer" => "Scambia livello"
+# --
+
+#Section: Copy Layer dialog - Added in 2.14 Beta 5
+"Destination Profile:" => "Profilo destinazione:"
+"Destination Layer:" => "Livello di destinazione:"
+
+#Section: Swap Layer dialog - Added in 2.14 Beta 5
+"Swap with layer:" => "Scambia con livello:"
+"Swap" => "Scambia"
+
+#Section: Simulated keystroke methods
+"(undefined)" => "(non definito)"
+"(pressed)" => "(premuto)"
+"(released)" => "(rilasciato)"
+"(during)" => "(durante)"
+"(thread-down)" => "(premendo verso il basso)"
+"(thread-up)" => "(premendo verso l'alto)"
+"(repeat)" => "(ripetizione)"
+"(sticky repeat)" => "(ripetizione premuta)"
+"(sticky hold)" => "(tenere premuto)"
+"(pressed & released)" => "(premuto & rilasciato)"				# -- Aggiunto in 2.4 Beta 12 --
+"(custom)" => "(custom)"				# -- Aggiunto in 2.17 Beta 9 --
+
+
+#Section: Simulated Keystrokes dialog
+"Simulated Keystrokes" => "Simulated Keystrokes"				# -- Aggiornato in 2.4 Beta 15 --
+"Enter the custom key(s)" => "Inserisci le chiavi personalizzate"
+"How to send the simulated key strokes:" => "Come inviare i tasti premuti simulati:"
+"1 As mouse button is pressed" => "1 Alla pressione del pulsante del mouse"
+"2 As mouse button is released" => "2 Al rilascio del pulsante del mouse"
+"3 During (press on down, release on up)" => "3 Durante (premi giù, rilascia su)"
+"4 In another thread as mouse button is pressed" => "4 In un altro thread quando viene premuto il pulsante del mouse"
+"5 In another thread as mouse button is released" => "5 In un altro thread al rilascio del pulsante del mouse"
+"6 Repeatedly while the button is down" => "6 Ripetutamente mentre il pulsante è premuto"
+"7 Sticky (repeatedly until button is pressed again)" => "7 Sticky (ripetutamente fino a quando il pulsante non viene premuto di nuovo)"
+"8 Sticky (held down until button is pressed again)" => "8 Sticky (tenuto premuto finché il pulsante non viene premuto di nuovo)"
+"9 As mouse button is pressed & when released" => "9 Alla pressione del pulsante del mouse e quando viene rilasciato"				# -- Aggiunto in 2.4 Beta 12 --
+"Only send if profile's process is active" => "Invia solo se il processo del profilo è attivo"
+"Block original mouse input" => "Blocca l'input originale del mouse"				# -- Aggiunto in 2.7 Beta 5 --
+"Block original mouse input only if active window matches profile" => "Blocca l'input originale del mouse solo se la finestra attiva corrisponde al profilo"				# -- Aggiunto in 2.20 Beta 4 --
+"Randomise auto repeat delay by 10%" => "Randomizza il ritardo di ripetizione automatica del 10%"				# -- Aggiunto in 2.11 Beta 6 --
+"Auto repeat delay" => "Ritardo ripetizione automatica"
+"(milliseconds)" => "(millisecondi)"
+"0 = Windows default repeat delay && speed." => "0 = ritardo di ripetizione predefinito di Windows e& velocità."
+
+# -- Added in 2.19 beta 3 --
+"Click this button to add {} tags" => "Fai clic su questo pulsante per aggiungere {} tag"
+"Hold this button and press a key to add that key's tag" => "Tieni premuto questo pulsante e premi un tasto per aggiungere il tag di quel tasto"
+
+# -- Added in 2.19 Beta 4
+"Drop down button to select a tag from the menu" => "Pulsante a discesa per selezionare un tag dal menu"
+
+# -- Added in 2.19 Beta 8
+"Right click to select a tag from the menu" => "Fai clic con il pulsante destro del mouse per selezionare un tag dal menu"				# Solo Windows XP (poiché non supporta il pulsante di divisione a discesa)
+
+# -----[ Added in 2.19 Beta 4 - SimKeys {} dropdown menu ]------------------
+"&Modifier Keys" => "&Tasti modificatori"
+"&Standard Keys" => "&Tasti standard"
+"&Direction Keys" => "&Tasti di direzione"
+"&Function Keys" => "&Tasti funzione"
+"&Numeric Keypad" => "&Tastierino numerico"
+"M&edia Keys" => "Tasti multimediali"
+"&Browser Keys" => "&Browser Keys"
+"Mo&use Buttons" => "Mo&use Buttons"				# Posizione modificata di & in 2.19 Beta 10
+"&Layer Tags" => "&Tag livello"
+"Mo&vement Tags" => "Mo&vement Tags"
+"&Action Tags" => "&Tag azione"
+"A&pplication Tags" => "A&application Tags"				# Aggiunto in 2.20 Beta 9
+
+"&Other Tags" => "&Altri tag"
+#-----[The following is the menu item for each special simkey {TAG}]
+"&Control" => "&Control"
+"&Right Control" => "&Control Destro"
+"&Alt" => "&Alt"
+"R&ight Alt (Alt Gr)" => "&Alt destra (Alt Gr)"
+"&Shift" => "&Maiusc"
+"Ri&ght Shift" => "&Maiusc destra"
+"&Windows Key" => "&Tasto Windows"
+"Rig&ht Windows Key" => "Tasto Windows destro"
+"A&pps (Context Menu) key" => "Tasto A&pps (menu contestuale)"
+"&Escape" => "&Esci"
+"&Space" => "&Spazio"
+"&Return" => "&Invio"
+"&Tab" => "&Tab"
+"&Backspace" => "&Backspace"
+"&Delete" => "&Elimina"
+"&Insert" => "&Inserisci"
+"&Home" => "&Casa"
+"E&nd" => "E&fine"
+"Page U&p" => "Pagina U&p"				# Posizione modificata di & in 2.19 Beta 9
+"Page Do&wn" => "Page Do&wn"				# Posizione modificata di & in 2.19 Beta 9
+"PrtScn" => "PrtScn"				# Rimosso il conflitto e nella 2.19 Beta 9
+"Pa&use" => "Pa&usa"
+BreakBreak  # Rimosso il conflitto e nella 2.19 Beta 9
+"CAPS Lock To&ggle" => "Blocca MAIUSC&disattiva"
+"Caps Lock &On" => "Blocco maiuscole &On"
+"Caps Lock O&ff" => "Blocco maiuscole disattivato"
+"Scroll &Lock Toggle" => "Scroll & Lock Toggle"				# Posizione modificata di & in 2.19 Beta 9
+"Scroll Lo&ck On" => "Blo&co scorrimento attivo"
+"Scroll Loc&k Off" => "Bloc&scorrimento disattivato"
+"&Up" => "&Su"
+"&Down" => "&Giù"
+"&Left" => "&Sinistra"
+"&Right" => "&Destra"
+"Num Lock &Toggle" => "Num Lock & Toggle"
+"Num Lock &On" => "Num Lock &On"
+"Num Lock O&ff" => "Bloc Num disattivato"
+"&Divide" => "&Dividi"
+"&Multiply" => "&Moltiplica"
+"&Subtract" => "&Sottrai"
+"&Add" => "&Aggiungi"
+"Decima&l" => "Decima&l"				# Posizione modificata di & in 2.19 Beta 9
+"&Enter" => "&Invio"
+"Num &0" => "Numero &0"
+"Num &1" => "Numero &1"
+"Num &2" => "Numero &2"
+"Num &3" => "Numero &3"
+"Num &4" => "Numero &4"
+"Num &5" => "Numero &5"
+"Num &6" => "Numero &6"
+"Num &7" => "Numero &7"
+"Num &8" => "Numero &8"
+"Num &9" => "Numero &9"
+"Volume &Up" => "Volume & su"
+"Volume &Down" => "Volume & Giù"
+"Set &Volume Percent" => "Set &Volume Percent"				# Aggiunto in 2.20 Beta 6
+"&Mute" => "&Muto"
+"&Play/Pause" => "&Riproduci/Pausa"
+"&Stop" => "&Fermare"
+"&Next Track" => "&Traccia successiva"
+"P&revious Track" => "Traccia precedente"
+"Launch Me&dia Select" => "Lancia Media &Seleziona"
+"Ho&me" => "Ho&me"				# Posizione modificata di & in 2.19 Beta 12 ##Questa è HOME nel browser web, non la chiave home!
+"&Back" => "&Indietro"
+"&Forward" => "&Avanti"
+"F&avourites" => "Preferiti"
+"R&efresh" => "R&efresh"				# Posizione modificata di & in 2.19 Beta 9
+"&Search" => "&Cerca"
+"Sto&p" => "Fermare"
+"L&eft Button" => "Pulsante sinistro"				# Posizione modificata di & in 2.19 Beta 9
+"R&ight Button" => "Pulsante destro"				# Posizione modificata di & in 2.19 Beta 9
+"Mi&ddle Button" => "Mi&ddle Button"				# Posizione modificata di & in 2.19 Beta 9
+"4&th Button" => "4&th Button"				# Posizione modificata di & in 2.19 Beta 9
+"5t&h Button" => "Pulsante 5t&h"				# Posizione modificata di & in 2.19 Beta 9
+"Wheel U&p" => "Wheel U&p"				# Posizione modificata di & in 2.19 Beta 9
+"Wheel D&own" => "Wheel D&own"				# Posizione modificata di & in 2.19 Beta 9
+"Wheel &Tilt Left" => "Ruota e inclinazione a sinistra"
+"Wheel Tilt Ri&ght" => "Wheel Tilt De&ght"				# Posizione modificata di & in 2.19 Beta 9
+"Ne&xt Layer" => "N&xt Layer"				# Posizione modificata di & in 2.19 Beta 9
+"P&revious Layer" => "P&revious Layer"				# Posizione modificata di & in 2.19 Beta 9
+"&Last Layer" => "&Ultimo livello"
+"&Move Cursor (X,Y)" => "&Sposta cursore (X,Y)"
+"&Set position relative to primary monitor (X,Y)" => "&Imposta posizione relativa al monitor principale (X,Y)"
+"S&et position relative to primary profile window (X,Y)" => "S&imposta posizione relativa alla finestra del profilo principale (X,Y)"
+"Se&t position relative to active window (X,Y)" => "Imposta posizione relativa alla finestra attiva (X,Y)"
+"S&ave position" => "S&salva posizione"
+"&Restore saved position" => "&Ripristina posizione salvata"
+"&Activate window" => "&Attiva finestra"
+"Activate &parent" => "Attiva &genitore"
+"Activate &top" => "Attiva &top"
+"&Busy Cursor" => "&Cursore occupato"
+"&Default Cursor" => "&Cursore predefinito"
+"&Invert X && Y Axis" => "&Invert X && Y Axis"				# Corretto doppio mancante & in 2.19 Beta 9
+"I&nvert X Axis" => "I&nverti asse X"
+"In&vert Y Axis" => "In&vert Y Axis"				# Risolto doppio & in 2.19 Beta 9
+"Lock &X Axis" => "Blocca &asse X"
+"Lock &Y Axis" => "Blocca asse &Y"
+"Loc&k XY Axis" => "Loc&k XY Axis"				# Aggiunto in 2.20 Beta 5
+"Un&lock X Axis" => "Un&lock X Axis"				# Aggiunto in 2.20 Beta 5
+"Unl&ock Y Axis" => "Unl&ock Y Axis"				# Aggiunto in 2.20 Beta 5
+"Unlo&ck XY Axis" => "Un&ck XY Axis"				# Aggiunto in 2.20 Beta 5
+"&Flush Queue" => "&Svuota coda"				# Aggiunto in 2.20 Beta 5
+
+"Set &Clipboard Text" => "Imposta testo &appunti"
+"&Run application" => "&Esegui applicazione"
+"Run application (&hidden)" => "Esegui applicazione (&nascosto)"				# Aggiunto in 2.20 Beta 9
+"Run application (&maximised)" => "Esegui applicazione (&massimizzata)"				# Aggiunto in 2.20 Beta 9
+"Run application (mi&nimised)" => "Esegui applicazione (mi&nimizzata)"				# Aggiunto in 2.20 Beta 9
+"Run application (&inactive)" => "Esegui applicazione (&inattiva)"				# Aggiunto in 2.20 Beta 9
+"Run application (as &Administrator)" => "Esegui applicazione (come &amministratore)"				# Aggiunto in 2.20 Beta 11
+"&Kill/Terminate process" => "&Uccidi/Termina processo"				# Aggiunto in 2.20 Beta 9
+
+"La&unch EMail" => "A&lancia email"
+"Launch App &1" => "Avvia app &1"
+"Launch App &2" => "Avvia app &2"
+"Launch &Media Select" => "Lancia &Media Select"
+"Brightness &Up" => "Luminosità &Su"
+"Brightness &Down" => "Luminosità &Giù"
+"&Wait <x> second(s)" => "&Attendi <x> secondo(i)"
+"W&ait <x> millisecond(s)" => "Aspetta <x> millisecondi"
+"&Hold for <x> second(s)" => "&Tieni premuto per <x> secondi"
+"H&old for <x> millisecond(s)" => "A&tieni premuto per <x> millisecondi"
+"Send &virtual key code" => "Invia &codice chiave virtuale"
+"Send &extended virtual key code" => "Invia &esteso codice chiave virtuale"
+"Send &keyboard scancode" => "Invia &tastiera scancode"
+"Send e&xtended keyboard scancode" => "Invia codice di scansione della tastiera estesa"
+"&Clear modifier tag state" => "&Cancella stato tag modificatore"
+"&Press key (Methods 1,2,4,5,6,7 && 9)" => "&Premere il tasto (Metodi 1,2,4,5,6,7 && 9)"
+"Release ke&y (Methods 1,2,4,5,6,7 && 9)" => "Release ke&y (Methods 1,2,4,5,6,7 && 9)"				# Posizione modificata di & in 2.19 Beta 9
+"&Send only when pressing" => "&Invia solo quando si preme"				# Posizione modificata di & in 2.19 Beta 9
+"Send o&nly when releasing" => "Invia solo al rilascio"
+"Send on&ly when repeating" => "Invia solo quando si ripete"
+
+#Added for 2.19 beta 8
+"&Press" => "&Premi"
+"Re&lease" => "Ri&rilascio"
+#---------------------------------------------------------------
+
+
+#Section: Finestra di dialogo Tasti simulati - testo di aiuto
+# NOTA: Per i seguenti testi, \r\n è una NUOVA RIGA e \t è una TAB. Assicurati di controllare il layout sui simkey
+# finestra di dialogo durante le traduzioni per garantire che il testo sia visibile e si adatti perfettamente.
+"Type the key sequence into the box above.\r\nYou can simulate the following extended keys using the specified tags..." => "Digita la sequenza di tasti nella casella in alto.\r\nPuoi simulare le seguenti chiavi estese utilizzando i tag specificati..."
+"Modifier tags:\r\n  {CTRL} {RCTRL} {ALT} {RALT} {SHIFT} {RSHIFT} {LWIN} {RWIN} {APPS}\r\n  NOTE:\tmodifier tags can be combined like {CTRL}{ALT} but apply to the NEXT KEY ONLY.\r\n\tFor example, to send CTRL+a+CTRL+s you should type '{CTRL}A{CTRL}S'." => "Tag di modifica:\r\n {CTRL} {RCTRL} {ALT} {RALT} {MAIUSC} {RSHIFT} {LWIN} {RWIN} {APPS}\r\n NOTA:\ti tag di modifica possono essere combinati come {CTRL }{ALT} ma vale SOLO per NEXT KEY.\r\n\tAd esempio, per inviare CTRL+a+CTRL+s devi digitare '{CTRL}A{CTRL}S'."
+
+# -- Updated in 2.14 beta 2 --
+"Extended key tags:\r\n  {DEL} {INS} {PGUP} {PGDN} {HOME} {END} {RETURN} {ESCAPE} {BACKSPACE}\r\n  {TAB} {PRTSCN} {PAUSE} {SPACE} {CAPSLOCK} {NUMLOCK} {SCROLLLOCK} {BREAK} {CTRLBREAK}" => "Tasti chiave estesi:\r\n {DEL} {INS} {PGUP} {PGDN} {HOME} {END} {RETURN} {ESCAPE} {BACKSPACE}\r\n {TAB} {PRTSCN} {PAUSE} { SPAZIO} {MAIUSCOLA} {BLOC NUM} {BLOC SCROLL} {BREAK} {CTRLBREAK}"
+
+# -- Updated in 2.9 beta 6 --
+"For example:\r\n  To close a window: {ALT}{F4}\r\n  To select all items: {CTRL}A\r\n  To type bold 'my text' in Microsoft Word: {CTRL}bmy text{CTRL}b\r\n  To send an 'r' key with a 50ms delay between the down and up, {HOLDMS:50}r\r\n  To turn OFF numlock, {NUMLOCKOFF}" => "Ad esempio:\r\n Per chiudere una finestra: {ALT}{F4}\r\n Per selezionare tutti gli elementi: {CTRL}A\r\n Per digitare in grassetto 'il mio testo' in Microsoft Word: {CTRL} bmy text{CTRL}b\r\n Per inviare un tasto 'r' con un ritardo di 50 ms tra il basso e l'alto, {HOLDMS:50}r\r\n Per disattivare il blocco numerico, {NUMLOCKOFF}"
+
+# -- Added in 2.9 beta 6 --
+"Special tags for send methods 1,2,4,5,6,7 & 9:\r\n\t\t\t{PRESS} Press down the following key\r\n\t\t\t{RELEASE} Release (let go of) the following key\r\n\t\t\tNOTE: You must {RELEASE} any key you {PRESS} in the same sequence!" => "Tag speciali per i metodi di invio 1,2,4,5,6,7 e 9:\r\n\t\t\t{PREMERE} Premere il seguente tasto\r\n\t\t\t{RELEASE } Rilascia (lascia andare) il seguente tasto\r\n\t\t\tNOTA: devi {RILASCIARE} qualsiasi tasto che {PREMMI} nella stessa sequenza!"
+"To press a b and c, wait 100ms and release them: {PRESS}abc{WAITMS100}{RELEASE}cba" => "Per premere ab e c, attendere 100 ms e rilasciarli: {PRESS}abc{WAITMS100}{RELEASE}cba"
+# -- #--
+
+# -- Updated in 2.4 Beta 10 and removed in 2.9 Beta 6 --
+"NOTE: To avoid lag when using the {WAIT}, {WAITMS}, {HOLD} or {HOLDMS} tags, try using the threaded\r\nsend methods in the dropdown above." => "NOTA: per evitare ritardi durante l'utilizzo dei tag {WAIT}, {WAITMS}, {HOLD} o {HOLDMS}, provare a utilizzare i metodi\r\nsend con thread nel menu a discesa in alto."
+
+# -- Updated in 2.4 Beta 15 --
+"Special function tags:\t{WAIT:n} inserts a delay of <n> seconds.\r\n\t\t\t{WAITMS:n} inserts a delay of <n> milliseconds.\r\n\t\t\t{HOLD:n} holds the next key down for <n> seconds.\r\n\t\t\t{HOLDMS:n} holds the next key down for <n> milliseconds.\r\n\t\t\t{VKC:n} Sends the specified virtual key code.\r\n\t\t\t{EXT:n} Sends the specified extended virtual key code.\r\n\t\t\t{CLEAR} Clears any modifier tags {CTRL},{ALT} etc." => "Special function tags:\t{WAIT:n} inserisce un ritardo di <n> secondi.\r\n\t\t\t{WAITMS:n} inserisce un ritardo di <n> millisecondi.\r\n\ t\t\t{HOLD:n} tiene premuto il tasto successivo per <n> secondi.\r\n\t\t\t{HOLDMS:n} tiene premuto il tasto successivo per <n> millisecondi.\r\ n\t\t\t{VKC:n} Invia il codice chiave virtuale specificato.\r\n\t\t\t{EXT:n} Invia il codice chiave virtuale esteso specificato.\r\n\t\t \t{CLEAR} Cancella tutti i tag modificatori {CTRL},{ALT} ecc."
+
+# -- Updated in 2.20 Beta 4 --
+"Special function tags:\t{WAIT:n} inserts a delay of <n> seconds." => "La funzione speciale tags:\t{WAIT:n} inserisce un ritardo di <n> secondi."
+"\t\t\t{WAITMS:n} inserts a delay of <n> milliseconds." => "\t\t\t{WAITMS:n} inserisce un ritardo di <n> millisecondi."
+"\t\t\t{WAITMS:x-y} inserts a random delay of between <x> and <y> milliseconds." => "\t\t\t{WAITMS:xy} inserisce un ritardo casuale compreso tra <x> e <y> millisecondi."
+"\t\t\t{HOLD:n} holds the next key down for <n> seconds." => "\t\t\t{HOLD:n} tiene premuto il tasto successivo per <n> secondi."
+"\t\t\t{HOLDMS:n} holds the next key down for <n> milliseconds." => "\t\t\t{HOLDMS:n} tiene premuto il tasto successivo per <n> millisecondi."
+"\t\t\t{VKC:n} Sends the specified virtual key code." => "\t\t\t{VKC:n} Invia il codice chiave virtuale specificato."
+"\t\t\t{EXT:n} Sends the specified extended virtual key code." => "\t\t\t{EXT:n} Invia il codice chiave virtuale esteso specificato."
+"\t\t\t{CLEAR} Clears any modifier tags {CTRL},{ALT} etc." => "\t\t\t{CLEAR} Cancella tutti i tag modificatori {CTRL},{ALT} ecc."
+
+#Added in 2.17 Beta 16
+"\t\t\t{SC:n} Sends the specified keyboard scan code." => "\t\t\t{SC:n} Invia il codice di scansione della tastiera specificato."
+"\t\t\t{SCE:n} Sends the specified extended keyboard scan code." => "\t\t\t{SCE:n} Invia il codice di scansione della tastiera esteso specificato."
+"\t\t\t{CB:<text>} Copies the specified <text> to the clipboard." => "\t\t\t{CB:<testo>} Copia il <testo> specificato negli appunti."
+##
+
+# -- Updated in 2.14 Beta 2 --
+"Direction key tags:\t\t{UP} {DOWN} {LEFT} {RIGHT}\r\nFunction key tags:\t\t{F1, F2, F3 ... F24}\r\nVolume key tags:\t\t{VOL+}, {VOL-}, {MUTE}\r\nBrightness control tags:\t\t{BRIGHTNESS+}, {BRIGHTNESS-}\r\nMouse button tags:\t\t{LMB}, {RMB}, {MMB}, {MB4/XMB1}, {MB5/XMB2}\r\nMouse wheel tags:\t\t{MWUP}, {MWDN}, {TILTL}, {TILTR}\r\nNumeric keypad tags:\t{NUM0-NUM9} {NUM+} {NUM-} {NUM.} {NUM/} {NUM*} {NUMENTER}\r\nWeb/Browser keys:\t\t{BACK}, {FORWARD}, {STOP}, {REFRESH}, {WEBHOME},\r\n\t\t\t{SEARCH}, {FAVORITES}\r\nToggle keys:\t\t{NUMLOCKON}, {NUMLOCKOFF}, {CAPSLOCKON}\r\n\t\t\t{CAPSLOCKOFF}, {SCROLLLOCKON}, {SCROLLLOCKOFF}" => "Tasti di direzione:\t\t{SU} {GIÙ} {SINISTRA} {DESTRA}\r\nTasti di funzione:\t\t{F1, F2, F3 ... F24}\r\nTasti di volume: \t\t{VOL+}, {VOL-}, {MUTE}\r\nTag di controllo della luminosità:\t\t{LUMINOSITÀ+}, {LUMINOSITÀ-}\r\nTag del pulsante del mouse:\t\t{LMB}, {RMB}, {MMB}, {MB4/XMB1}, {MB5/XMB2}\r\nTag rotellina del mouse:\t\t{MWUP}, {MWDN}, {TILTL}, {TILTR}\r\nTastierino numerico tags:\t{NUM0-NUM9} {NUM+} {NUM-} {NUM.} {NUM/} {NUM*} {NUMENTER}\r\nTasti Web/Browser:\t\t{INDIETRO}, {AVANTI} , {STOP}, {AGGIORNA}, {WEBHOME},\r\n\t\t\t{CERCA}, {PREFERITI}\r\nTasti di commutazione:\t\t{BLOC NUM}, {BLOC NUM}, {BLOC MAIUSC }\r\n\t\t\t{MAIUSCOLAOFF}, {SCROLLLOCKON}, {SCROLLLOCKOFF}"
+
+# -- Removed in 2.18 Beta 12 --
+"Direction key tags:\t\t{UP} {DOWN} {LEFT} {RIGHT}\r\nFunction key tags:\t\t{F1, F2, F3 ... F24}\r\nVolume key tags:\t\t{VOL+}, {VOL-}, {MUTE}\r\nBrightness control tags:\t{BRIGHTNESS+}, {BRIGHTNESS-}\r\nMouse button tags:\t\t{LMB}, {RMB}, {MMB}, {MB4/XMB1}, {MB5/XMB2}\r\nMouse wheel tags:\t\t{MWUP}, {MWDN}, {TILTL}, {TILTR}\r\nNumeric keypad tags:\t{NUM0-NUM9} {NUM+} {NUM-} {NUM.} {NUM/} {NUM*} {NUMENTER}\r\nWeb/Browser keys:\t\t{BACK}, {FORWARD}, {STOP}, {REFRESH}, {WEBHOME},\r\n\t\t\t{SEARCH}, {FAVORITES}\r\nToggle keys:\t\t{NUMLOCKON}, {NUMLOCKOFF}, {CAPSLOCKON}\r\n\t\t\t{CAPSLOCKOFF}, {SCROLLLOCKON}, {SCROLLLOCKOFF}" => "Tasti di direzione:\t\t{SU} {GIÙ} {SINISTRA} {DESTRA}\r\nTasti di funzione:\t\t{F1, F2, F3 ... F24}\r\nTasti di volume: \t\t{VOL+}, {VOL-}, {MUTE}\r\nTag di controllo della luminosità:\t{LUMINOSITÀ+}, {LUMINOSITÀ-}\r\nTag del pulsante del mouse:\t\t{LMB}, {RMB }, {MMB}, {MB4/XMB1}, {MB5/XMB2}\r\nTag rotellina del mouse:\t\t{MWUP}, {MWDN}, {TILTL}, {TILTR}\r\nTag tastierino numerico: \t{NUM0-NUM9} {NUM+} {NUM-} {NUM.} {NUM/} {NUM*} {NUMENTER}\r\nTasti Web/Browser:\t\t{INDIETRO}, {AVANTI}, { STOP}, {AGGIORNA}, {WEBHOME},\r\n\t\t\t{CERCA}, {PREFERITI}\r\nTasti di commutazione:\t\t{BLOC NUM}, {BLOC NUM}, {BLOC MAIUSC}\ r\n\t\t\t{MAIUSCOLAOFF}, {SCROLLLOCKON}, {SCROLLLOCKOFF}"
+
+# -- Changed (split up) in 2.18 Beta 12
+"Direction key tags:\t\t{UP} {DOWN} {LEFT} {RIGHT}" => "Tag chiave di direzione:\t\t{SU} {GIÙ} {SINISTRA} {DESTRA}"
+"Function key tags:\t\t{F1, F2, F3 ... F24}" => "Tag tasto funzione:\t\t{F1, F2, F3 ... F24}"
+"Volume key tags:\t\t{VOL+}, {VOL-}, {MUTE}" => "Tag tasti volume:\t\t{VOL+}, {VOL-}, {MUTE}"
+"Brightness control tags:\t{BRIGHTNESS+}, {BRIGHTNESS-}" => "Tag controllo luminosità:\t{LUMINOSITÀ+}, {LUMINOSITÀ-}"
+"Mouse button tags:\t\t{LMB}, {RMB}, {MMB}, {MB4/XMB1}, {MB5/XMB2}" => "Tag del pulsante del mouse:\t\t{LMB}, {RMB}, {MMB}, {MB4/XMB1}, {MB5/XMB2}"
+"Mouse button up/down tags:\tAdd a D (for down/pressed)" => "Etichette pulsante mouse su/giù:\tAggiungi una D (per giù/premuto)"
+"\t\t\tor a U (for up/released) to the mouse button tags (above)" => "\t\t\tor a U (per aggiornato/rilasciato) ai tag del pulsante del mouse (sopra)"
+"\t\t\te.g. {LMBD}, {LMBU}, {RMBD}, {RMBU}, {MB4D}, {MB5U} etc." => "\t\t\te.g. {LMBD}, {LMBU}, {RMBD}, {RMBU}, {MB4D}, {MB5U} ecc."				# Aggiornato nella 2.18 Beta 13
+"Mouse wheel tags:\t\t{MWUP}, {MWDN}, {TILTL}, {TILTR}" => "Tag rotella del mouse:\t\t{MWUP}, {MWDN}, {TILTL}, {TILTR}"
+"Numeric keypad tags:\t{NUM0-NUM9} {NUM+} {NUM-} {NUM.} {NUM/} {NUM*} {NUMENTER}" => "Tag tastierino numerico:\t{NUM0-NUM9} {NUM+} {NUM-} {NUM.} {NUM/} {NUM*} {NUMENTER}"				# Corretto in 2.18 Beta 13
+"Web/Browser keys:\t\t{BACK}, {FORWARD}, {STOP}, {REFRESH}, {WEBHOME}, {SEARCH}, {FAVORITES}" => "Tasti Web/Browser:\t\t{INDIETRO}, {AVANTI}, {STOP}, {AGGIORNA}, {WEBHOME}, {CERCA}, {PREFERITI}"
+"Toggle keys:\t\t{NUMLOCKON}, {NUMLOCKOFF}, {CAPSLOCKON}, {CAPSLOCKOFF},\r\n\t\t\t{SCROLLLOCKON}, {SCROLLLOCKOFF}" => "Tasti di commutazione:\t\t{BLOCCONUM}, {BLOCCONUM}, {BLOCCOMAIUSCOLA}, {BLOCCAMAIUSC},\r\n\t\t\t{BLOCCOSCRO}, BLOCCOSCRO}"
+# --
+
+
+# -- Added in 2.11 Beta 16 --
+"Movement tags\t\t{MXSET:n} {MYSET:n} {MXADD:n} {MYADD:n}\r\n\t\t\tSET sets the mouse cursor's X or Y position to <n>\r\n\t\t\tADD moves the mouse cursor's X or Y position by <n> pixels" => "Etichette movimento\t\t{MXSET:n} {MYSET:n} {MXADD:n} {MYADD:n}\r\n\t\t\tSET imposta la posizione X o Y del cursore del mouse su <n>\ r\n\t\t\tADD sposta la posizione X o Y del cursore del mouse di <n> pixel"
+
+# -- Changed in 2.15 beta 7, 8 & 9 --
+"Movement tags:\t\t{MADD:x,y} Move cursor X & Y position by <x,y> pixels" => "Tag di movimento:\t\t{MADD:x,y} Sposta la posizione X e Y del cursore di <x,y> pixel"
+"\t\t\t{MSET:x,y} Set cursor position to <x,y> (relative to primary monitor)" => "\t\t\t{MSET:x,y} Imposta la posizione del cursore su <x,y> (rispetto al monitor principale)"
+"\t\t\t{PSET:x,y} Set cursor position to <x,y> (relative to profile window)" => "\t\t\t{PSET:x,y} Imposta la posizione del cursore su <x,y> (rispetto alla finestra del profilo)"
+"\t\t\t{ASET:x,y} Set cursor position to <x,y> (relative to active window)" => "\t\t\t{ASET:x,y} Imposta la posizione del cursore su <x,y> (rispetto alla finestra attiva)"
+"\t\t\t{MSAVE:n} Save the current cursor position to memory <n> (1-10)" => "\t\t\t{MSAVE:n} Salva la posizione corrente del cursore in memoria <n> (1-10)"				#Aggiornato in 2.16 Beta 17
+"\t\t\t{MREST:n} Restore the saved cursor position from memory <n> (1-10)" => "\t\t\t{MREST:n} Ripristina la posizione del cursore salvata dalla memoria <n> (1-10)"				#Aggiornato in 2.16 Beta 17
+
+# -- Deprecated in 2.15 Beta 9 - they still work but are not displayed
+"Movement tags:\t\t{MXADD:n} Move cursor X position (horizontally) by <n> pixels" => "Etichette di movimento:\t\t{MXADD:n} Sposta la posizione X del cursore (orizzontalmente) di <n> pixel"
+"\t\t\t{MYADD:n} Move cursor Y position (vertically) by <n> pixels" => "\t\t\t{MYADD:n} Sposta la posizione Y del cursore (verticalmente) di <n> pixel"
+"\t\t\t{MXSET:n} Set cursor X position to <n> (relative to primary monitor)" => "\t\t\t{MXSET:n} Imposta la posizione del cursore X su <n> (rispetto al monitor principale)"
+"\t\t\t{MYSET:n} Set cursor Y position to <n> (relative to primary monitor)" => "\t\t\t{MYSET:n} Imposta la posizione del cursore Y su <n> (rispetto al monitor principale)"
+"\t\t\t{PXSET:n} Set cursor X position to <n> (relative to profile window)" => "\t\t\t{PXSET:n} Imposta la posizione del cursore X su <n> (rispetto alla finestra del profilo)"
+"\t\t\t{PYSET:n} Set cursor Y position to <n> (relative to profile window)" => "\t\t\t{PYSET:n} Imposta la posizione del cursore Y su <n> (rispetto alla finestra del profilo)"
+"\t\t\t{AXSET:n} Set cursor X position to <n> (relative to active window)" => "\t\t\t{AXSET:n} Imposta la posizione del cursore X su <n> (rispetto alla finestra attiva)"
+"\t\t\t{AYSET:n} Set cursor Y position to <n> (relative to active window)" => "\t\t\t{AYSET:n} Imposta la posizione del cursore Y su <n> (rispetto alla finestra attiva)"
+# --
+
+# -- Added in 2.15 Beta 2 - split up in 2.20 Beta 9 --
+"Application tags:\t\t{RUN:<application>} {RUN:<full path to exe>}\r\n\t\t\tRun the specified application. If the application is not in the system PATH\r\n\t\t\tplease specify the full path to the executable (including .EXE)" => "Application tags:\t\t{RUN:<application>} {RUN:<full path to exe>}\r\n\t\t\tEsegui l'applicazione specificata. Se l'applicazione non è nel PATH di sistema\r \n\t\t\tspecificare il percorso completo dell'eseguibile (incluso .EXE)"
+
+# -- Added in 2.20 Beta 9 --
+"Application tags:\t\t{RUN:<application>} Run the specified application." => "Tag applicazione:\t\t{RUN:<applicazione>} Esegue l'applicazione specificata."
+"\t\t\t{RUNHID:<application>} Run the specified application (hidden)." => "\t\t\t{RUNHID:<applicazione>} Esegue l'applicazione specificata (nascosta)."				# -- Modificato nella 2.20 Beta 11
+"\t\t\t{RUNMAX:<application>} Run the specified application (maximized)." => "\t\t\t{RUNMAX:<applicazione>} Esegue l'applicazione specificata (ingrandita)."				# -- Modificato nella 2.20 Beta 11
+"\t\t\t{RUNMIN:<application>} Run the specified application (minimized)." => "\t\t\t{RUNMIN:<applicazione>} Esegue l'applicazione specificata (ridotta a icona)."				# -- Modificato nella 2.20 Beta 11
+"\t\t\t{RUNINA:<application>} Run the specified application but do not activate the window." => "\t\t\t{RUNINA:<applicazione>} Esegue l'applicazione specificata ma non attiva la finestra."				# -- Modificato nella 2.20 Beta 11
+"\t\t\t{RUNADM:<application>} Run the specified application as administrator." => "\t\t\t{RUNADM:<applicazione>} Esegue l'applicazione specificata come amministratore."				# -- Aggiunto nella 2.20 Beta 11
+"\t\t\t{KILL:<executable>} Kill/Terminate processes belonging to executable." => "\t\t\t{KILL:<eseguibile>} Uccidi/termina i processi che appartengono all'eseguibile."
+"\t\t\tNOTE: For run commands, please specify the full path to the executable (including .EXE)" => "\t\t\tNOTA: per eseguire i comandi, specificare il percorso completo dell'eseguibile (incluso .EXE)"
+# --
+
+# -- Added in 2.15 Beta 7 --
+"Cursor Position: X,Y (AX, AY)" => "Posizione cursore: X,Y (AX, AY)"
+
+# -- Added in 2.16 Beta 17
+"Action tags:" => "Tag azione:"
+"\t\t{ACTIVATE} Activate the window under the cursor." => "\t\t{ACTIVATE} Attiva la finestra sotto il cursore."
+
+# -- Added in 2.18 beta 8 --
+"Layer modifier tags:" => "Tag modificatori di livello:"
+"\t{LAYER:x} Switch to layer <x>" => "\t{LAYER:x} Passa al layer <x>"
+"\t\t\t{LAYER:next} Switch to next layer" => "\t\t\t{LAYER:successivo} Passa al livello successivo"
+"\t\t\t{LAYER:back} Switch to preceding layer" => "\t\t\t{LAYER:indietro} Passa al livello precedente"
+"\t\t\t{LAYER:last} Switch to the last active layer" => "\t\t\t{LAYER:last} Passa all'ultimo layer attivo"
+"On Button Pressed/Released/Repeated tags:" => "Su pulsante premuto/rilasciato/tag ripetuti:"
+"\t\t\t{OD} Only send when the button is pressed" => "\t\t\t{OD} Invia solo quando il pulsante viene premuto"
+"\t\t\t{OU} Only send when the button is released" => "\t\t\t{OU} Invia solo quando il pulsante viene rilasciato"
+"\t\t\t{OR} Only send when repeating" => "\t\t\t{OR} Invia solo se ripetuto"
+# --
+
+# -- Added in 2.17 Beta 1
+"\t\t\t{ACTIVATEPARENT} Activate the parent of the window under the cursor." => "\t\t\t{ACTIVATEPARENT} Attiva il genitore della finestra sotto il cursore."
+"\t\t\t{ACTIVATETOP} Activate the top level (root) owner of the window under the cursor." => "\t\t\t{ACTIVATETOP} Attiva il proprietario di primo livello (root) della finestra sotto il cursore."
+# --
+
+# -- Updated in 2.17 Beta 10
+# Queste funzioni possono inviare qualsiasi messaggio di Windows https://msdn.microsoft.com/en-us/library/windows/desktop/ff381405(v=vs.85).aspx
+"Windows Message tags:" => "Tag dei messaggi di Windows:"
+"\t{POSTWM:<M>,<L>,<W>} Post a message to the window under the cursor." => "\t{POSTWM:<M>,<L>,<W>} Invia un messaggio alla finestra sotto il cursore."
+"\t\t\t{SENDWM:<M>,<L>,<W>} Send a message to the window under the cursor." => "\t\t\t{SENDWM:<M>,<L>,<W>} Invia un messaggio alla finestra sotto il cursore."
+"\t\t\tWHERE:\t<M> is the message, <L> is the LPARAM value and <W> is the WPARAM value." => "\t\t\tWHERE:\t<M> è il messaggio, <L> è il valore LPARAM e <W> è il valore WPARAM."
+"\t\t\tNOTE:\t<M>, <L> & <W> can be specified in decimal (eg. 16) or hex (eg. 0x10)." => "\t\t\tNOTA:\t<M>, <L> e <W> possono essere specificati in decimale (es. 16) o esadecimale (es. 0x10)."
+
+# -- Added in 2.19 Beta 4
+"Media key tags:\t\t{MEDIAPLAY}, {MEDIASTOP}, {MEDIANEXT}, {MEDIAPREV}" => "Tag chiave multimediale:\t\t{MEDIAPLAY}, {MEDIASTOP}, {MEDIANEXT}, {MEDIAPREV}"
+"\t\t\t{CURSORBUSY} Switch the mouse pointer to the busy cursor." => "\t\t\t{CURSORBUSY} Sposta il puntatore del mouse sul cursore occupato."
+"\t\t\t{CURSORDEFAULT} Switch the mouse pointer to the default cursor." => "\t\t\t{CURSORDEFAULT} Cambia il puntatore del mouse al cursore predefinito."
+"\t\t\t{INVERTXY} Invert X and Y Axis." => "\t\t\t{INVERTXY} Inverti asse X e Y."
+"\t\t\t{INVERTX} Invert X Axis." => "\t\t\t{INVERTX} Inverti asse X."
+"\t\t\t{INVERTY} Invert Y Axis." => "\t\t\t{INVERTY} Inverti asse Y."
+"\t\t\t{LOCKXY} Lock both X and Y Axis." => "\t\t\t{LOCKXY} Blocca entrambi gli assi X e Y."
+"\t\t\t{LOCKX} Lock X Axis." => "\t\t\t{LOCKX} Blocca l'asse X."
+"\t\t\t{LOCKY} Lock Y Axis." => "\t\t\t{LOCKY} Blocca l'asse Y."
+"\t\t\t{LOCKC} Cycle Lock X->Y->Unlock Axis." => "\t\t\t{LOCKC} Ciclo Blocca X->Y->Sblocca asse."				# -- Aggiunto nella 2.20 Beta 4
+"\t\t\t{UNLOCKXY} Unlock both X and Y Axis." => "\t\t\t{UNLOCKXY} Sblocca entrambi gli assi X e Y."
+"\t\t\t{UNLOCKX} Unlock X Axis." => "\t\t\t{UNLOCKX} Sblocca l'asse X."
+"\t\t\t{UNLOCKY} Unlock Y Axis." => "\t\t\t{UNLOCKY} Sblocca l'asse Y."
+
+#Run Application dialog
+"Type the name of a program, folder, document or internet resource, and X-Mouse Button Control will open it for you when the button is pressed." => "Digita il nome di un programma, cartella, documento o risorsa Internet e X-Mouse Button Control lo aprirà per te quando il pulsante viene premuto."				# -- Aggiornato nella 2.19 Beta 1
+
+#Open Explorer at specified folder dialog
+"Please select a folder to open" => "Seleziona una cartella da aprire"
+
+#Section: Change Movement to Scroll Configuration -- Added in 2.15 Beta 1
+"Movement to Scroll Configuration" => "Movimento per scorrere la configurazione"
+"Sensitivity" => "Sensibilità"
+"V&ertical" => "V&ertical"				# -- Aggiunto in 2.19 Beta 11
+"H&orizontal" => "H&orizontal"				# -- Aggiunto in 2.19 Beta 11
+"Invert &Vertical Axis" => "Inverti &asse verticale"
+"Invert &Horizontal Axis" => "Inverti &asse orizzontale"
+"&Sticky (until next click)" => "&Sticky (fino al prossimo clic)"
+
+"&Default Action (no movement)" => "&Azione predefinita (nessun movimento)"				# -- Aggiunto in 2.17 Beta 1
+
+#Added in 2.17 Beta 6
+"Block all other buttons when sticky" => "Blocca tutti gli altri pulsanti quando sono appiccicosi"
+"Lock Scroll Axis/Direction" => "Blocca asse/direzione di scorrimento"
+"Don't lock (scroll in any direction)" => "Non bloccare (scorrere in qualsiasi direzione)"
+"Lock to axis determined by cursor movement" => "Blocca sull'asse determinato dal movimento del cursore"
+"Lock to Y axis (scroll vertically)" => "Blocca sull'asse Y (scorri verticalmente)"
+"Lock to X axis (scroll horizontally)" => "Blocca sull'asse X (scorri orizzontalmente)"
+##
+
+#Added in 2.17 Beta  16
+"Movement To Scroll Default Action" => "Movimento per scorrere l'azione predefinita"
+
+"#Section: Scrolling & navigation tab (or Scrolling ad Options tabs post 2.15 Beta 5)"
+"&Invert mouse wheel scrolling" => "&Inverti scorrimento con la rotellina del mouse"
+"I&nvert mouse horizontal (tilt) scrolling" => "I&nverti lo scorrimento orizzontale (inclinazione) del mouse"
+"Wheel scrolls i&n pages instead of lines" => "La rotellina scorre nelle pagine anziché nelle righe"
+"Lines to scroll using the scroll wheel:" => "Righe da scorrere usando la rotellina di scorrimento:"				# -- Rimosso nella 2.7 Beta 4. Lasciato per retrocompatibilità --
+"Lines to scroll using the scroll wheel" => "Righe da scorrere usando la rotella di scorrimento"				# -- Aggiunto/Aggiornato in 2.7 Beta 4 --
+"Enable a&xis locking modifier keys" => "Abilita i tasti modificatori di blocco a&xis"
+"Advanced Window Scrolling" => "Scorrimento avanzato della finestra"
+"&Scroll Method" => "&Metodo di scorrimento"
+"&Vertical Lines" => "&Linee verticali"
+"&Horizontal characters" => "&Caratteri orizzontali"
+"Method 1 (SCROLL Msg)" => "Metodo 1 (SCROLL Msg)"
+"Method 2 (ScrollInfo)" => "Metodo 2 (ScrollInfo)"
+"Method 3 (Left/Right Keys)" => "Metodo 3 (tasti sinistra/destra)"
+"Method 4 (Wheel Msg)" => "Metodo 4 (Wheel Msg)"
+"Method 5 (WPF Scroll Msg)" => "Metodo 5 (WPF Scroll Msg)"
+"None (Disable Scroll)" => "Nessuno (disattiva scorrimento)"
+
+# -- Added in 2.7 Beta 7 --
+"&Disable Scroll Window Under Cursor" => "&Disattiva finestra di scorrimento sotto il cursore"
+
+# -- Added in 2.8 Beta 6 --
+"Switch primary and secondary mouse buttons" => "Inverti i pulsanti del mouse primario e secondario"
+"Don't swap buttons" => "Non scambiare i pulsanti"
+"Swap buttons" => "Scambia pulsanti"
+# --
+
+# -- Added in 2.9 Beta 3 --
+"Ignore &repeated remapped vertical scroll" => "Ignora &scorrimento verticale rimappato ripetuto"
+"Ignore repeated remapped hori&zontal scroll" => "Ignora scorrimento orizzontale rimappato ripetuto"
+"for" => "per"
+"milliseconds" => "millisecondi"
+# --
+
+# -- Added in 2.13 Beta 9 --
+"&Force Scroll Pages/Lines (If application does not respond to setting)" => "&Forza scorrimento pagine/righe (se l'applicazione non risponde all'impostazione)"				# Questa opzione forza l'impostazione di scorrimento righe/scambio pulsanti a TUTTE le finestre aperte.
+
+# -- Added in 2.15 Beta 1 --
+"&Clip (lock) mouse cursor to active window" => "&Aggancia (blocca) il cursore del mouse alla finestra attiva"
+
+# -- Added in 2.15 Beta 5 --
+"&Override Mouse Speed" => "&Sostituisci velocità mouse"
+
+# -- Added in 2.17 Beta 3 --
+"Active window on hover" => "Finestra attiva al passaggio del mouse"
+
+"Disable &profile switching on mouse move for this profile" => "Disabilita l'attivazione del &profilo al movimento del mouse per questo profilo"
+
+# -- Added in 2.19 Beta 1 --
+"Disable &layer modifier keys for this profile" => "Disabilita i tasti modificatori &layer per questo profilo"
+
+# -- Added in 2.19 Beta 8
+"Change mouse c&ursor when profile is active" => "Cambia c&ursore del mouse quando il profilo è attivo"
+
+# -- Added in 2.20 Beta 9
+"Run command when profile is &activated" => "Esegui comando quando il profilo è &attivato"
+
+# -- Aggiunto nella versione 2.19 Beta 9 -- Opzioni cursore colorato....
+"Red" => "Rosso"
+"Green" => "Verde"
+"Blue" => "Blu"
+"Orange" => "Arancione"
+"Turquoise" => "Turchese"
+"Yellow" => "Giallo"
+
+#Section: About Dialog
+"XML support provided by XML++ from Michael at turboirc.com" => "Supporto XML fornito da XML++ da Michael su turboirc.com"
+"XMBC is distributed freely (with no warranty or guarantee) for the use of anyone, anywhere. If you like XMBC and wish to show your appreciation please feel free to make a donation by clicking the PayPal button below." => "XMBC è distribuito gratuitamente (senza alcuna garanzia o garanzia) per l'uso da parte di chiunque, ovunque. Se ti piace XMBC e desideri mostrare il tuo apprezzamento, non esitare a fare una donazione facendo clic sul pulsante PayPal in basso."
+"More information can be found on my download page or user forums." => "Ulteriori informazioni possono essere trovate sulla mia pagina di download o sui forum degli utenti."
+"&Donate" => "&Donate"				# -- Aggiornato nella 2.16 Beta 14
+"&Homepage" => "&Homepage"				# -- Aggiornato nella 2.16 Beta 14
+"&Forums" => "&Forum"				# -- Aggiornato nella 2.16 Beta 14
+
+# -- Added in 2.16 Beta 14
+"Open &Userguide" => "Apri &Userguide"
+"Open &XMBC Folder" => "Apri cartella &XMBC"
+"&Check for Update" => "&Verifica aggiornamenti"
+# --
+
+# -- Added in 2.4 Beta 15 --
+"About" => "Informazioni"
+"Version" => "Versione"
+"This application is designed and written by %s of %s." => "Questa applicazione è stata progettata e scritta da %s di %s. ""				# NOTA: I %s vengono sostituiti in fase di esecuzione; lasciali lì!"
+# --
+
+#Section: Find Window Dialog
+"Find Window" => "Trova finestra"
+"Find Method" => "Trova metodo"
+"Click and drag the window finder icon to the window you want to select." => "Fai clic e trascina l'icona di Window Finder sulla finestra che desideri selezionare."
+"Hover" => "Passa il mouse"
+"Move the mouse over the window you want to select && turn on CAPS LOCK to lock the window details in place." => "Sposta il mouse sopra la finestra che desideri selezionare e attiva BLOC MAIUSC per bloccare i dettagli della finestra in posizione."
+"You can also manually enter/edit the window details below." => "Puoi anche inserire/modificare manualmente i dettagli della finestra di seguito."
+"Window Details" => "Dettagli finestra"
+"Caption" => "Didascalia"
+"Handle" => "Maniglia"
+"&Process" => "&Processo"
+"C&lass" => "Classe"
+"Pa&rent Class" => "Classe padre"
+"Only match if there is no parent class." => "Corrisponde solo se non esiste una classe genitore."
+"Enable Regular Expression Matching" => "Abilita corrispondenza espressioni regolari"				# -- Aggiunto in 2.8 Beta 1 --
+"NOTE: The fields can be empty which will match ALL (*) windows (unless you tick the checkbox for empty parent class). When set, the text must match that of the window's properties." => "NOTA: i campi possono essere vuoti e corrisponderanno a TUTTE (*) le finestre (a meno che non selezioni la casella di controllo per la classe genitore vuota). Quando impostato, il testo deve corrispondere a quello delle proprietà della finestra."
+
+# -- Added in 2.8 Beta 3 --
+"Window Regions" => "Regioni finestra"
+"Activate the profile only if the cursor is over the selected areas of the window." => "Attiva il profilo solo se il cursore si trova sopra le aree selezionate della finestra."
+"You must define at least one window region!" => "Devi definire almeno un'area della finestra!"
+# --
+
+# -- Added in 2.16 Beta 2 --
+"Match Type" => "Tipo di corrispondenza"
+"Window" => "Finestra"
+"Parent Window" => "Finestra genitore"
+"Window and Parent Window" => "Finestra e finestra principale"
+"Ancestor Window" => "Finestra Antenata"
+"Window and Ancestor Window" => "Finestra e Finestra Antenata"
+# --
+
+# -- Added in 2.16 Beta 8 --
+"&Activate the profile only when the cursor is in the specified area" => "&Attiva il profilo solo quando il cursore si trova nell'area specificata"
+"Top" => "In alto"
+"Left" => "Sinistra"
+"Bottom" => "In basso"
+"Right" => "Destra"
+"? Positive = Relative to top of window\n? Negative = Relative to bottom of window" => "? Positivo = Relativo alla parte superiore della finestra\n? Negativo = Relativo alla parte inferiore della finestra"				# Aggiornato in 2.16 Beta 11
+"? Positive = Relative to left of window\n? Negative = Relative to right of window" => "? Positivo = Relativo a sinistra della finestra\n? Negativo = Relativo a destra della finestra"				# Aggiornato in 2.16 Beta 11
+"Top Left Quadrant" => "Quadrante in alto a sinistra"
+"Top Right Quadrant" => "Quadrante in alto a destra"
+"Bottom Left Quadrant" => "Quadrante in basso a sinistra"
+"Bottom Right Quadrant" => "Quadrante in basso a destra"
+"Enable caption matching" => "Abilita la corrispondenza dei sottotitoli"
+
+# -- Added in 2.17 Beta 1
+"Non regular expression matches can contain multiple search entries, separated by two pipe characters e.g. 'app1.exe||app2.exe||app3.exe'" => "Le corrispondenze di espressioni non regolari possono contenere più voci di ricerca, separate da due caratteri barra verticale, ad esempio 'app1.exe||app2.exe||app3.exe'"
+
+
+#Section: Finestra di dialogo Scegli applicazione (profilo finestra personalizzato)
+"Choose Application" => "Scegli applicazione"
+"Select from the list of running applications:" => "Seleziona dall'elenco delle applicazioni in esecuzione:"
+"Or type in/browse to the application executable (.EXE) file" => "Oppure digitare/cercare il file eseguibile dell'applicazione (.EXE)"
+"Application" => "Applicazione"
+"&Specific Window" => "&Finestra specifica"
+
+# -- Aggiunto in 2.4 Beta 15 --# -- Aggiunto in 2.4 Beta 15 --
+"&Refresh" => "&Aggiorna"
+"Process Name" => "Nome processo"
+"Window Title" => "Titolo finestra"
+# --
+
+
+#Section: Errors/Message boxes
+"Please close the settings dialog in order to fully apply your language selection." => "Chiudere la finestra di dialogo delle impostazioni per applicare completamente la selezione della lingua."
+"The specified application already exists.\nYou can not add two entries for the same application." => "L'applicazione specificata esiste già.\nNon puoi aggiungere due voci per la stessa applicazione."
+"You must select a profile to remove!" => "Devi selezionare un profilo da rimuovere!"
+"You can not edit the default profile!" => "Non puoi modificare il profilo predefinito!"
+"You can not remove the default profile!" => "Non puoi rimuovere il profilo predefinito!"
+"You must select a profile to edit." => "Devi selezionare un profilo da modificare."
+"The specified window configuration is invalid!" => "La configurazione della finestra specificata non è valida!"
+"The specified profile already exists.\nYou can not add two profile entries for the same application/window." => "Il profilo specificato esiste già.\nNon puoi aggiungere due voci di profilo per la stessa applicazione/finestra."
+"You must select an application to copy." => "Devi selezionare un'applicazione da copiare."
+"Warning: If you say 'No', any changes will be lost!" => "Attenzione: se dici 'No', tutte le modifiche andranno perse!"
+"Do you want to overwrite profile" => "Vuoi sovrascrivere il profilo"				# -- Aggiornato in 2.7 Beta 5 --
+"The selected file is not a valid settings file." => "Il file selezionato non è un file di impostazioni valido."
+"The log file can not be opened as it does not exist." => "Impossibile aprire il file di registro poiché non esiste."
+"is unable to open the log file" => "impossibile aprire il file di registro"
+"Unable to save the desktop icons using your current shell and this version of" => "Impossibile salvare le icone del desktop utilizzando la shell corrente e questa versione di"
+"Unable to restore the desktop icons using your current shell and this version of" => "Impossibile ripristinare le icone del desktop utilizzando la shell corrente e questa versione di"
+
+# -- Added in 2.16 beta 3
+"Do you want to save the changes you have made to the configuration?\n\nWarning: If you say 'No', any changes will be lost!" => "Vuoi salvare le modifiche apportate alla configurazione?\n\nAttenzione: se dici 'No', tutte le modifiche andranno perse!"
+"Do you want to save the changes you have made to the current profile?" => "Vuoi salvare le modifiche apportate al profilo corrente?"
+# --
+
+
+# -- Updated in v2.4 Beta 14 --
+"There is a new version available!" => "C'è una nuova versione disponibile!"
+"A new version is available." => "È disponibile una nuova versione."
+"Open the setup dialog and hit the about button for more information." => "Apri la finestra di dialogo delle impostazioni e premi il pulsante Informazioni per ulteriori informazioni."
+"Click the 'Homepage' button to go and download it." => "Fai clic sul pulsante 'Homepage' per andare a scaricarlo."
+"There is a new beta version available!" => "È disponibile una nuova versione beta!"
+"A new beta version is available." => "È disponibile una nuova versione beta."
+"Click the 'Forums' button to go and download it." => "Fai clic sul pulsante 'Forum' per andare a scaricarlo."
+# --
+
+# -- Updated / Added in v2.14 Beta 3 --
+"The specified profile already exists.\nYou can not add two profile entries for the same application/window/region." => "Il profilo specificato esiste già.\nNon è possibile aggiungere due voci di profilo per la stessa applicazione/finestra/regione."
+"The specified profile already exists.\nYou can not add two profile entries for the same window with overlapping regions." => "Il profilo specificato esiste già.\nNon puoi aggiungere due voci di profilo per la stessa finestra con regioni sovrapposte."
+# --#--
+
+# -- Updated / Added in v2.16 Beta 2 --
+"The specified profile already exists.\nYou can not add two profile entries for the same application/window/region with overlapping match types." => "Il profilo specificato esiste già.\nNon puoi aggiungere due voci di profilo per la stessa applicazione/finestra/regione con tipi di corrispondenza sovrapposti."
+"The specified profile already exists.\nYou can not add two profile entries for the same application/window/region/match type." => "Il profilo specificato esiste già.\nNon puoi aggiungere due voci di profilo per la stessa applicazione/finestra/regione/tipo di corrispondenza."
+"The specified profile already exists.\nYou can not add two profile entries for the same application/window/match type with overlapping regions." => "Il profilo specificato esiste già.\nNon puoi aggiungere due voci di profilo per la stessa applicazione/finestra/tipo di corrispondenza con regioni sovrapposte."
+"The specified profile already exists.\nYou can not add two profile entries for the same application/window/match type with overlapping regions and match types." => "Il profilo specificato esiste già.\nNon puoi aggiungere due voci di profilo per la stessa applicazione/finestra/tipo di corrispondenza con aree geografiche e tipi di corrispondenza sovrapposti."
+
+
+"You have to select or enter a process name, or press cancel." => "Devi selezionare o inserire un nome di processo o premere Annulla."
+"Enabling debug logging will decrease the performance of the mouse. It is recommended that you only enable this temporarily to assist in problem finding. As such, the debug setting will not be saved." => "L'abilitazione della registrazione di debug ridurrà le prestazioni del mouse. Si consiglia di abilitarla solo temporaneamente per facilitare la ricerca dei problemi. Pertanto, l'impostazione di debug non verrà salvata."
+"Are you sure you want to enable debug logging?" => "Sei sicuro di voler abilitare la registrazione di debug?"
+"Please be aware that checking if a mouse message is 'non-client', in order to determine if it should be ignored or not, much more processing is required." => "Tieni presente che controllare se un messaggio del mouse è 'non client', al fine di determinare se deve essere ignorato o meno, è necessaria molta più elaborazione."
+"This can slow down mouse operation in general, sometimes causing strange results." => "Questo può rallentare il funzionamento del mouse in generale, a volte causando strani risultati."
+"Are you sure you want to ignore non-client messages?" => "Sei sicuro di voler ignorare i messaggi non client?"
+"By default, the icon in the system tray (by the clock) is always shown. If you turn this off, there will be no icon in the system tray by default." => "Per impostazione predefinita, l'icona nella barra delle applicazioni (vicino all'orologio) è sempre mostrata. Se la disattivi, non ci sarà alcuna icona nella barra delle applicazioni per impostazione predefinita."
+"To restore the icon, you can run the program again from your start menu. This will force the icon to be displayed temporarily, allowing you to access this setup screen." => "Per ripristinare l'icona, puoi eseguire nuovamente il programma dal menu di avvio. Ciò forzerà la visualizzazione temporanea dell'icona, consentendoti di accedere a questa schermata di configurazione."
+
+"#Section: Balloon pop-up windows"
+"Debugging enabled" => "Debug abilitato"
+"Debugging disabled" => "Debug disabilitato"
+"Successfully saved desktop icon positions" => "Posizioni delle icone del desktop salvate con successo"
+"Successfully restored desktop icon positions" => "Posizioni delle icone del desktop ripristinate con successo"
+"Mouse button re-mapping is now disabled" => "La nuova mappatura del pulsante del mouse è ora disabilitata"
+"Mouse button re-mapping is now enabled" => "La nuova mappatura dei pulsanti del mouse è ora abilitata"
+
+#Section: Import / Export dialogs
+# -- Added in 2.7 Beta 3 --
+"The file to import is corrupt or not a valid file." => "Il file da importare è danneggiato o non è un file valido."
+"The XML settings file is corrupt and could not be loaded.\nYou can not make any changes until this error has been fixed." => "Il file delle impostazioni XML è danneggiato e non può essere caricato.\nNon è possibile apportare modifiche fino a quando questo errore non sarà stato risolto."
+"The XML settings file is corrupt and could not be updated safely.\nPlease fix the error and try again." => "Il file delle impostazioni XML è danneggiato e non può essere aggiornato in modo sicuro.\nCorreggere l'errore e riprovare."
+# --#--
+
+#Section: Actions (displayed in the drop-down lists)
+"Left Click" => "Clic sinistro"
+"Right Click" => "Clic destro"
+"Next Window" => "Finestra successiva"
+"Back" => "Indietro"
+"Forward" => "Avanti"
+"Middle Click" => "Clic centrale"
+"Disable" => "Disattiva"
+"Close (Alt+F4)" => "Chiudi (Alt+F4)"
+"Copy (Ctrl+C)" => "Copia (Ctrl+C)"
+"Cut (Ctrl+X)" => "Taglia (Ctrl+X)"
+"Double Click" => "Doppio clic"
+"Enter" => "Invio"
+"Maximize Window" => "Ingrandisci finestra"
+"Minimize Window" => "Riduci finestra"
+"New" => "Nuovo"
+"Open" => "Apri"
+"Paste (Ctrl+V)" => "Incolla (Ctrl+V)"
+"Redo (Ctrl+Y)" => "Ripristina (Ctrl+Y)"
+"Show/Hide Desktop" => "Mostra/Nascondi desktop"
+"Undo (Ctrl+Z)" => "Annulla (Ctrl+Z)"
+"Media - Mute" => "Media - Muto"
+"Media - Volume Up" => "Media - Volume su"
+"Media - Volume Down" => "Media - Abbassa volume"
+"Media - Next Track" => "Media - Traccia successiva"
+"Media - Last Track" => "Media - Ultima traccia"
+"Media - Stop" => "Media - Stop"
+"Media - Play/Pause" => "Media - Riproduci/Pausa"
+"Launch EMail" => "Launch EMail"				# -- (re?) Aggiunta traduzione mancante nella 2.19 Beta 13
+"Simulated Keys" => "Chiavi simulate"
+"Lock Workstation" => "Blocca postazione di lavoro"
+"Open Explorer" => "Apri Explorer"
+"Open RUN Command" => "Apri comando RUN"
+"Restore Window" => "Ripristina finestra"
+"Escape" => "Escape"
+"Open Help" => "Apri Aiuto"
+"Open Web Browser" => "Apri browser web"
+"Browser Stop" => "Browser Stop"
+"Browser Refresh" => "Aggiorna browser"
+"Browser Search" => "Browser Search"				# Aggiornato in 2.14 Beta 10
+"Browser Favourites" => "Preferiti del browser"
+"** No Change (Don't intercept) **" => "** Nessuna modifica (non intercettare) **"
+"Run Application" => "Esegui applicazione"
+"Mouse Wheel Up" => "Rotellina del mouse in alto"
+"Mouse Wheel Down" => "Rotellina del mouse giù"
+"Print Screen" => "Stampa schermo"
+"Print Active Window" => "Stampa finestra attiva"
+"Sticky Left Button [Click-Drag]" => "Pulsante sinistro adesivo [clic-trascinamento]"
+"Sticky Right Button" => "Pulsante destro permanente"
+"Sticky Middle Button" => "Pulsante centrale adesivo"
+"Layer (Next)" => "Livello (successivo)"
+"Layer (Previous)" => "Livello (precedente)"
+"Layer 1" => "Livello 1"
+"Layer 2" => "Livello 2"
+"Layer 3" => "Livello 3"
+"Layer 4" => "Livello 4"
+"Layer 5" => "Livello 5"
+#-- Added in 2.10 Beta 2
+"Layer 6" => "Livello 6"
+"Layer 7" => "Livello 7"
+"Layer 8" => "Livello 8"
+#-- Added in 2.10 Beta 3
+"Layer 9" => "Livello 9"
+"Layer 10" => "Livello 10"
+# --
+"Open Explorer at specified folder" => "Apri Explorer nella cartella specificata"
+"Open Explorer at My Documents" => "Apri Explorer in Documenti"
+"Open Explorer at My Computer" => "Apri Explorer su Risorse del computer"
+"Open Explorer at Network Favourites" => "Apri Explorer nei preferiti di rete"
+"Open Control Panel" => "Apri pannello di controllo"
+"Double Click Drag" => "Doppio clic trascina"
+"Mouse Wheel Tilt Left" => "Rotellina del mouse inclinata a sinistra"
+"Mouse Wheel Tilt Right" => "Rotellina del mouse inclinata a destra"
+"Scroll Window Up" => "Scorri la finestra verso l'alto"
+"Scroll Window Down" => "Scorri la finestra verso il basso"
+"Scroll Window Left" => "Scorri finestra a sinistra"
+"Scroll Window Right" => "Scorri finestra a destra"
+"Previous Window" => "Finestra precedente"
+"Activate Screensaver" => "Attiva salvaschermo"
+"Activate Monitor Power Saving" => "Attiva il risparmio energetico del monitor"
+"** Same As Default Profile **" => "** Uguale al profilo predefinito **"
+"Sticky 4th Button" => "Quarto pulsante appiccicoso"
+"Sticky 5th Button" => "Quinto pulsante appiccicoso"
+"Change Movement to Scroll" => "Cambia movimento in scorrimento"
+"Change Movement to Scroll (Sticky)" => "Cambia movimento in scorrimento (appiccicoso)"
+"Sticky Left Button [Click-Drag] X-Axis" => "Pulsante Sinistro Appiccicoso [Clic-Trascina] Asse X"
+"Sticky Left Button [Click-Drag] Y-Axis" => "Pulsante Sinistro Appiccicoso [Clic-Trascina] Asse Y"
+
+# -- Updated in 2.4 Beta 12 --
+"Flip 3D" => "Capovolgi 3D"
+"ALT-TAB" => "ALT-TAB"
+"Show sidebar" => "Mostra barra laterale"
+"Reveal Desktop" => "Reveal Desktop"				# -- Aggiunto in 2.4 Beta 12 -- stessa azione di Mostra barra laterale
+"** Same As Layer 1 (current profile) **" => "** Uguale al livello 1 (profilo corrente) **"				# -- Aggiunto in 2.4 Beta 12 --
+
+# -- Updated in 2.4 Beta 15 --
+"Layer Modifier Revert" => "Ripristina modificatore livello"
+
+# -- Updated in 2.6 Beta 1 (For Windows 8) --
+"Task Switcher" => "Commutatore attività"
+"Charms Bar (WIN+C)" => "Barra degli accessi (WIN+C)"
+"PC Settings (WIN+I)" => "Impostazioni PC (WIN+I)"
+"Search Charm (WIN+Q)" => "Accesso alla ricerca (WIN+Q)"
+"Search Apps (WIN+W)" => "Cerca applicazioni (WIN+W)"
+"Search Files (WIN+F)" => "Cerca file (WIN+F)"
+"Metro Snap Right" => "Metro Snap Destra"
+"Metro Snap Left" => "Metro Snap a sinistra"
+
+# -- Updated in 2.14 Beta 6 (for Windows 10) --
+"Cortana Search" => "Ricerca Cortana"
+
+# -- Added in 2.7 Beta 7 --
+"Magnifier Toggle On/Off" => "Attiva/disattiva lente d'ingrandimento"
+
+
+# -- Added in 2.8 Beta 1 --
+"Brightness Down" => "Riduzione luminosità"
+"Brightness Up" => "Aumenta luminosità"
+
+# -- Added in 2.9 Beta 1 --
+"Snap Modern UI Left" => "Snap Modern UI Left"
+"Snap Modern UI Right" => "Snap Modern UI Right"
+"Snap Window Left" => "Blocca finestra a sinistra"
+"Snap Window Right" => "Blocca finestra a destra"
+"Snap Window Up" => "Aggancia finestra in alto"
+"Snap Window Down" => "Snap Window Down"
+"Virtual Desktop: New" => "Desktop virtuale: Nuovo"
+"Virtual Desktop: Close" => "Desktop virtuale: Chiudi"
+"Virtual Desktop: Switch Left" => "Desktop virtuale: cambia a sinistra"
+"Virtual Desktop: Switch Right" => "Desktop virtuale: passa a destra"
+# --
+
+# -- Added in 2.11 Beta 15
+"Task View" => "Task View ""				#Was ""Desktop Switcher"""
+
+# -- Added in 2.11 Beta 15
+"Magnifier Zoom In" => "Lente d'ingrandimento Zoom avanti"
+"Magnifier Zoom Out" => "Lente d'ingrandimento Zoom indietro"
+
+# -- Added in 2.12 Beta 1
+"Click Button 4" => "Fare clic sul pulsante 4"
+"Click Button 5" => "Fai clic sul pulsante 5"
+
+# -- Added in 2.12 Beta 11
+"Change Movement to Scroll (Lock Axis)" => "Cambia movimento in scorrimento (Blocca asse)"
+"Change Movement to Scroll (Sticky Lock Axis)" => "Cambia movimento in scorrimento (asse di blocco appiccicoso)"
+
+# -- Added in 2.13 Beta 1
+"Change Movement to Scroll Inverted" => "Cambia movimento in scorrimento invertito"
+"Change Movement to Scroll Inverted (Sticky)" => "Cambia movimento in scorrimento invertito (appiccicoso)"
+"Change Movement to Scroll Inverted (Lock Axis)" => "Cambia movimento in scorrimento invertito (Blocca asse)"
+"Change Movement to Scroll Inverted (Sticky Lock Axis)" => "Cambia movimento in scorrimento invertito (asse di blocco appiccicoso)"
+
+# -- Added in 2.13 Beta 4
+"Search Selected Text" => "Cerca testo selezionato"
+
+# -- Changed in 2.14 Beta 6
+"Web Search Selected Text" => "Ricerca Web testo selezionato"
+
+# -- Added in 2.14 Beta 6 (missing for some time!) --
+"System Menu (WIN+X)" => "Menu di sistema (WIN+X)"
+
+# -- Added in 2.14 Beta 10
+"Lock Mouse X-Axis (While pressed)" => "Blocca l'asse X del mouse (mentre premuto)"
+"Lock Mouse X-Axis (Toggle)" => "Blocca l'asse X del mouse (attiva/disattiva)"
+"Lock Mouse Y-Axis (While pressed)" => "Blocca l'asse Y del mouse (mentre premuto)"
+"Lock Mouse Y-Axis (Toggle)" => "Blocca l'asse Y del mouse (commuta)"
+
+# -- Added in 2.18 Beta 4
+"Drag to Move Window" => "Trascina per spostare la finestra"
+"Drag to Size Window" => "Trascina per ridimensionare la finestra"
+
+# -- Added in 2.18 Beta 14
+"Slow down mouse cursor (While pressed)" => "Rallenta il cursore del mouse (mentre è premuto)"
+"Slow down mouse cursor (Sticky)" => "Rallenta il cursore del mouse (appiccicoso)"
+
+# -- Added in 2.19 Beta 7
+"Cycle mouse cursor speed" => "Cycle mouse cursor speed"				#NOTA: il testo dell'azione viene utilizzato anche nella scheda dei tasti di scelta rapida globale!
+""
+"# -- Added in 2.19 Beta 10"
+"Open Emoji Keyboard" => "Apri tastiera Emoji"				# -- Disponibile solo su Windows 10
+
+# -- Fine dell'elenco delle azioni dei pulsanti ------------------------------------------ --------------------------------------
+
+#Section: Notifiche di cambio livello
+# -- Aggiunto nella 2.10 Beta 14 --
+"Activating layer %d" => "Attivazione livello %d"				#Nel suggerimento del fumetto quando si cambia livello %d è il numero del livello
+"Activating layer '%s'" => "Attivazione livello '%s'"				#Nella descrizione comandi del fumetto quando si cambia livello %s è il nome del livello
+
+#Section: Controllo versione/aggiornamento
+# -- Aggiunto nella 2.10 Beta 1 --
+"&Check for update..." => "&Controlla aggiornamenti..."
+"Click here to update." => "Clicca qui per aggiornare."
+"Right click the XMBC Icon to download the update." => "Fai clic con il pulsante destro del mouse sull'icona XMBC per scaricare l'aggiornamento."
+"Would you like to upgrade %s from v%s to v%s" => "Vuoi aggiornare %s da v%s a v%s ""				# NOTA: I %s vengono sostituiti in fase di esecuzione; lasciali lì!"
+"Portable v%s is available. Would you like to visit the website to find out more?" => "Portable v%s è disponibile. Vuoi visitare il sito per saperne di più?"				# Risolto/modificato nella 2.19 Beta 2
+"You have the latest available version of %s" => "Hai l'ultima versione disponibile di %s"
+"An error occurred while attempting to download the update package." => "Si è verificato un errore durante il tentativo di scaricare il pacchetto di aggiornamento."
+"Please visit the website to download the latest version or try again later." => "Si prega di visitare il sito Web per scaricare l'ultima versione o riprovare più tardi."
+"An error occurred while running the update package" => "Si è verificato un errore durante l'esecuzione del pacchetto di aggiornamento"
+
+# -- Updated in 2.14 Beta 9
+"Click here for more details." => "Clicca qui per maggiori dettagli."
+
+
+# -- Added in 2.10 Beta 12 --
+"Downloading" => "Download"
+"Launching the update installation..." => "Avvio dell'installazione dell'aggiornamento in corso..."
+"Downloading update..." => "Download dell'aggiornamento..."				#Progresso iniziale nella finestra di download
+"Downloaded %d of %d bytes" => "Scaricato %d di %d byte"				#Avanzamento nella finestra di download
+
+#Section: Button Chording
+# -- Added in 2.14 Beta 1 --
+"Button Chording" => "Bottone Chording"
+"Default (No Chord)" => "Predefinito (nessun accordo)"
+"Button chording allows you to make assign chorded actions that apply when one button is pressed, followed by a second button." => "L'accordo dei pulsanti ti consente di assegnare azioni con accordi che si applicano quando viene premuto un pulsante, seguito da un secondo pulsante."
+
+# -- Added in 2.14 Beta 3 --
+"&Block / Delay original button action until chord is established" => "&Blocca / Ritarda l'azione del pulsante originale finché non viene stabilito l'accordo"
+
+# -- Added in 2.15 Beta 11 --
+"&Unblock after" => "&Sblocca dopo"
+"Unblock when the mouse moves" => "Sblocca quando il mouse si muove"				# -- Aggiunto nella 2.16 Beta 2 --
+
+# -- Added in 2.14 Beta 8
+"Change Log:" => "Registro modifiche:"
+"Unable to locate change log!" => "Impossibile individuare il registro delle modifiche!"
+"&Upgrade" => "&Aggiorna"				# Risolto in 2.16 Beta 14
+"&Skip" => "&Salta"				# Risolto in 2.16 Beta 14
+
+# -- Added in 2.17 Beta 4 and updated in 2.17 beta 5 --
+#Section Button Held Time Dependent Actions
+"Button Held Time Dependent Actions" => "Pulsante premuto Azioni dipendenti dal tempo"
+"Define different actions based on how long you hold the mouse button down for when clicking." => "Definisci diverse azioni in base a quanto tempo tieni premuto il pulsante del mouse quando fai clic."
+"Normal Click" => "Clic normale"
+"Held for" => "Trattenuto per"
+"Held for time for action %d must be greater than that for action %d." => "Trattenuto per il tempo per l'azione %d deve essere maggiore di quello per l'azione %d."				# NOTA: I %d vengono interpretati in fase di esecuzione. Lasciali lì
+
+# Added in 2.17 Beta 6
+"&Abort and revert to the normal click action when the mouse moves." => "&Interrompi e ripristina la normale azione di clic quando il mouse si sposta."
+"NOTE: All but the last enable action above will not be performed until the button is released (once the hold time has been determined). The last action will be started once the minimum time period is reached." => "NOTA: tutte le azioni tranne l'ultima abilitazione di cui sopra non verranno eseguite finché il pulsante non viene rilasciato (una volta determinato il tempo di attesa). L'ultima azione verrà avviata una volta raggiunto il periodo di tempo minimo."				#Rimosso nella 2.18 Beta 7 (vedi sotto)
+"NOTE: All but the last enabled 'held for' action above will not be performed until the button is released (once the hold time has been determined). The last action will be started once the minimum time period is reached." => ""NOTA: tutte le azioni trattenuto per"" tranne l'ultima non verranno eseguite finché il pulsante non viene rilasciato (una volta determinato il tempo di attesa). L'ultima azione verrà avviata una volta raggiunto il periodo di tempo minimo."" ""				#Modificato nella 2.18 Beta 7
+
+# Added in 2.18 Beta 7
+"&Wait until the physical button is released before releasing the last timed action" => "&Attendi fino al rilascio del pulsante fisico prima di rilasciare l'ultima azione temporizzata"				#Risolto (aggiunto il" => ") nella 2.18 Beta 10
+
+#Added in 2.17 Beta 7
+"Description (to show in button drop-down)" => "Descrizione (da mostrare nel menu a discesa del pulsante)"
+
+#Added in 2.17 beta 16
+"Button Held" => "Pulsante premuto"
+
+# Added in 2.20 Beta 3
+"Abor&t and revert to the last held action when the mouse moves." => "Interrompi e torna all'ultima azione trattenuta quando il mouse si sposta."
+
+# Added in 2.20.1 / 2.21 Beta 1
+"The selected file could not be imported." => "Impossibile importare il file selezionato."

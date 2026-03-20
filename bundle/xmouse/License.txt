@@ -1,0 +1,34 @@
+X-Mouse Button Control, Copyright (C) 2005-2023 Phillip Gibbons.
+
+X-Mouse Button Control is FREE for anyone to install and use.
+If you have paid for this software, please request a refund 
+from the person or organization that you paid!
+
+X-Mouse Button Control uses the pugixml library (http://pugixml.org)
+pugixml is Copyright (C) 2006-2015 Arseny Kapoulkine. 
+
+X-Mouse Button Control uses BugTrap (https://github.com/bchavez/BugTrap)
+BugTrap is Copyright (c) 2005, IntelleSoft, Maksim Pyatkovskiy.
+
+X-Mouse Button Control uses several other works as follows:
+	OddButton Copyright (c) 2001-2002 Paolo Messina and Jerzy Kaczorowski
+	https://www.codeproject.com/Articles/1318/COddButton
+
+	XButtonXP by Hans Dietrich, Licenced under the CPOL Licence
+	https://www.codeproject.com/Articles/9919/XButtonXP-an-XP-aware-pushbutton-that-can-also-tog
+
+	CTabCtrlSSL by Derek Lakin, Licenced under the CPOL Licence
+	https://www.codeproject.com/Articles/1383/CTabCtrlSSL-An-easy-to-use-flexible-extended-tab-c
+
+	CUPDialog by Gopalakrishna Palem, Licenced under the CPOL Licence
+	https://www.codeproject.com/Articles/7700/Universal-Progress-Dialog
+
+	Alphanum Algorithm implementation by Dirk Jagdmann, Licenced under thelibpng/zlib license
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS 
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

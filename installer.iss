@@ -1,7 +1,8 @@
 ; Internet QuickKit Installer
 ; Compile with Inno Setup 6+ (https://jrsoftware.org/isinfo.php)
 ;
-; All files are bundled inside the installer — no internet needed.
+; All files pre-extracted and bundled. No internet, no tar, no cmd,
+; no powershell needed at runtime.
 
 #define MyAppName    "Internet QuickKit"
 #define MyAppVersion "1.0"
@@ -32,9 +33,17 @@ Name: "crane";  Description: "Crane 0.21.3 (Google Container Registry CLI)";   T
 Name: "xmouse"; Description: "XMouse Button Control (Portable)";               Types: full
 
 [Files]
-Source: "bundle\GitSetup.exe";      DestDir: "{app}"; Components: git;    Flags: ignoreversion deleteafterinstall
-Source: "bundle\crane.tar.gz";      DestDir: "{app}"; Components: crane;  Flags: ignoreversion deleteafterinstall
-Source: "bundle\XMousePortable.zip"; DestDir: "{app}"; Components: xmouse; Flags: ignoreversion deleteafterinstall
+; Git installer — extracted to {app}, run post-install, then auto-deleted
+Source: "bundle\GitSetup.exe"; DestDir: "{app}"; Components: git; Flags: ignoreversion deleteafterinstall
+
+; Crane — pre-extracted binaries copied directly
+Source: "bundle\crane\crane.exe";  DestDir: "{app}\crane"; Components: crane; Flags: ignoreversion
+Source: "bundle\crane\gcrane.exe"; DestDir: "{app}\crane"; Components: crane; Flags: ignoreversion
+Source: "bundle\crane\krane.exe";  DestDir: "{app}\crane"; Components: crane; Flags: ignoreversion
+
+; XMouse — pre-extracted 64-bit portable
+Source: "bundle\xmouse\64bit (x64)\*"; DestDir: "{app}\xmouse"; Components: xmouse; Flags: ignoreversion recursesubdirs
+Source: "bundle\xmouse\Readme Portable.txt"; DestDir: "{app}\xmouse"; Components: xmouse; Flags: ignoreversion
 
 [Dirs]
 Name: "{app}\Git";    Components: git
@@ -63,26 +72,5 @@ begin
     Log('Installing Git...');
     Exec(App + '\GitSetup.exe', Format('/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER /DIR="%s\Git"', [App]), App, SW_HIDE, ewWaitUntilTerminated, Code);
     Log(Format('Git exit code: %d', [Code]));
-  end;
-
-  { ---- Crane ---- }
-  if WizardIsComponentSelected('crane') then
-  begin
-    Log('Extracting Crane...');
-    Exec(ExpandConstant('{sys}\tar.exe'), Format('-xzf "%s\crane.tar.gz" -C "%s\crane"', [App, App]), App, SW_HIDE, ewWaitUntilTerminated, Code);
-    Log(Format('Crane tar exit code: %d', [Code]));
-  end;
-
-  { ---- XMouse Button Control ---- }
-  if WizardIsComponentSelected('xmouse') then
-  begin
-    Log('Extracting XMouse...');
-    Exec(ExpandConstant('{sys}\tar.exe'), Format('-xf "%s\XMousePortable.zip" -C "%s\xmouse"', [App, App]), App, SW_HIDE, ewWaitUntilTerminated, Code);
-    if Code <> 0 then
-    begin
-      ForceDirectories(App + '\xmouse');
-      CopyFile(App + '\XMousePortable.zip', App + '\xmouse\XMouseButtonControl.exe', False);
-    end;
-    Log(Format('XMouse exit code: %d', [Code]));
   end;
 end;
