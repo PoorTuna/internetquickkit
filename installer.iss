@@ -58,19 +58,39 @@ Type: filesandordirs; Name: "{app}\xmouse"
 [Code]
 procedure CurStepChanged(CurStep: TSetupStep);
 var
-  App: string;
+  App, Summary: string;
   Code: Integer;
+  ProgressPage: TOutputProgressWizardPage;
 begin
   if CurStep <> ssPostInstall then
     Exit;
 
   App := ExpandConstant('{app}');
+  Summary := 'Install folder: ' + App + #13#10 + #13#10;
 
   { ---- Git for Windows ---- }
   if WizardIsComponentSelected('git') then
   begin
-    Log('Installing Git...');
-    Exec(App + '\GitSetup.exe', Format('/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER /DIR="%s\Git"', [App]), App, SW_HIDE, ewWaitUntilTerminated, Code);
-    Log(Format('Git exit code: %d', [Code]));
+    ProgressPage := CreateOutputProgressPage('Installing Git', 'Installing Git for Windows... This may take a few minutes.');
+    ProgressPage.Show;
+    try
+      ProgressPage.SetProgress(1, 3);
+      Exec(App + '\GitSetup.exe', Format('/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER /DIR="%s\Git"', [App]), App, SW_HIDE, ewWaitUntilTerminated, Code);
+      ProgressPage.SetProgress(3, 3);
+      if Code = 0 then
+        Summary := Summary + 'Git: Installed to ' + App + '\Git' + #13#10
+      else
+        Summary := Summary + 'Git: FAILED (exit code ' + IntToStr(Code) + ')' + #13#10;
+    finally
+      ProgressPage.Hide;
+    end;
   end;
+
+  if WizardIsComponentSelected('crane') then
+    Summary := Summary + 'Crane: Installed to ' + App + '\crane' + #13#10;
+
+  if WizardIsComponentSelected('xmouse') then
+    Summary := Summary + 'XMouse: Installed to ' + App + '\xmouse' + #13#10;
+
+  MsgBox(Summary, mbInformation, MB_OK);
 end;
