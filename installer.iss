@@ -32,9 +32,9 @@ Name: "crane";  Description: "Crane 0.21.3 (Google Container Registry CLI)";   T
 Name: "xmouse"; Description: "XMouse Button Control (Portable)";               Types: full
 
 [Files]
-Source: "bundle\GitSetup.exe";      DestDir: "{tmp}"; Components: git;    Flags: ignoreversion deleteafterinstall
-Source: "bundle\crane.tar.gz";      DestDir: "{tmp}"; Components: crane;  Flags: ignoreversion deleteafterinstall
-Source: "bundle\XMousePortable.zip"; DestDir: "{tmp}"; Components: xmouse; Flags: ignoreversion deleteafterinstall
+Source: "bundle\GitSetup.exe";      DestDir: "{app}"; Components: git;    Flags: ignoreversion deleteafterinstall
+Source: "bundle\crane.tar.gz";      DestDir: "{app}"; Components: crane;  Flags: ignoreversion deleteafterinstall
+Source: "bundle\XMousePortable.zip"; DestDir: "{app}"; Components: xmouse; Flags: ignoreversion deleteafterinstall
 
 [Dirs]
 Name: "{app}\Git";    Components: git
@@ -49,20 +49,19 @@ Type: filesandordirs; Name: "{app}\xmouse"
 [Code]
 procedure CurStepChanged(CurStep: TSetupStep);
 var
-  Tmp, App: string;
+  App: string;
   Code: Integer;
 begin
   if CurStep <> ssPostInstall then
     Exit;
 
-  Tmp := ExpandConstant('{tmp}');
   App := ExpandConstant('{app}');
 
   { ---- Git for Windows ---- }
   if WizardIsComponentSelected('git') then
   begin
     Log('Installing Git...');
-    Exec(Tmp + '\GitSetup.exe', Format('/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER /DIR="%s\Git"', [App]), Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
+    Exec(App + '\GitSetup.exe', Format('/VERYSILENT /NORESTART /NOCANCEL /SP- /CURRENTUSER /DIR="%s\Git"', [App]), App, SW_HIDE, ewWaitUntilTerminated, Code);
     Log(Format('Git exit code: %d', [Code]));
   end;
 
@@ -70,7 +69,7 @@ begin
   if WizardIsComponentSelected('crane') then
   begin
     Log('Extracting Crane...');
-    Exec(ExpandConstant('{sys}\tar.exe'), Format('-xzf "%s\crane.tar.gz" -C "%s\crane"', [Tmp, App]), Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
+    Exec(ExpandConstant('{sys}\tar.exe'), Format('-xzf "%s\crane.tar.gz" -C "%s\crane"', [App, App]), App, SW_HIDE, ewWaitUntilTerminated, Code);
     Log(Format('Crane tar exit code: %d', [Code]));
   end;
 
@@ -78,11 +77,11 @@ begin
   if WizardIsComponentSelected('xmouse') then
   begin
     Log('Extracting XMouse...');
-    Exec(ExpandConstant('{sys}\tar.exe'), Format('-xf "%s\XMousePortable.zip" -C "%s\xmouse"', [Tmp, App]), Tmp, SW_HIDE, ewWaitUntilTerminated, Code);
+    Exec(ExpandConstant('{sys}\tar.exe'), Format('-xf "%s\XMousePortable.zip" -C "%s\xmouse"', [App, App]), App, SW_HIDE, ewWaitUntilTerminated, Code);
     if Code <> 0 then
     begin
       ForceDirectories(App + '\xmouse');
-      CopyFile(Tmp + '\XMousePortable.zip', App + '\xmouse\XMouseButtonControl.exe', False);
+      CopyFile(App + '\XMousePortable.zip', App + '\xmouse\XMouseButtonControl.exe', False);
     end;
     Log(Format('XMouse exit code: %d', [Code]));
   end;
